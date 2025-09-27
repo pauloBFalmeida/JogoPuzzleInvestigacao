@@ -5,16 +5,10 @@ public class PlayerInteract : MonoBehaviour
     public float rayDistance = 100f;
     public LayerMask layerInteracao;
 
-    private PlayerMovement playerMovement;
-
-    void Start()
-    {
-        playerMovement = GetComponent<PlayerMovement>();
-    }
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0)) // Botao Esq Mouse
+        if (Input.GetMouseButtonDown(0) && GameManager.Instance.IsCameraSeguindoCursor()) // Botao Esq Mouse
         {
             CastRay();
         }
@@ -33,7 +27,7 @@ public class PlayerInteract : MonoBehaviour
             Interactable interactable = hit.collider.GetComponent<Interactable>();
             if (interactable != null)
             {
-                interactable.Interact(playerMovement);
+                interactable.Interact();
             }
         }
     }

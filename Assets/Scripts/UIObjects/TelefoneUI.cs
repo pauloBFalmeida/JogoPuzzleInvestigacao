@@ -9,11 +9,13 @@ public class TelefoneUI : MonoBehaviour
 
     public void Show()
     {
+        GameManager.Instance.CameraPararCursor();
         gameObject.SetActive(true);
     }
 
     public void Hide()
     {
+        GameManager.Instance.CameraSeguirCursor();
         gameObject.SetActive(false);
     }
 
@@ -22,4 +24,9 @@ public class TelefoneUI : MonoBehaviour
         Debug.Log("Dialed number: " + number);
     }
 
+    public void Sair()
+    {
+        Hide();
+    }
+    
 }
