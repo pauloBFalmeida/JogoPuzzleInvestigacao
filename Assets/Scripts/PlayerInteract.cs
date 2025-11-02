@@ -23,8 +23,7 @@ public class PlayerInteract : MonoBehaviour
         {
             Debug.Log("Hit: " + hit.collider.name);
 
-            // Try to find an Interactable component on the object
-            Interactable interactable = hit.collider.GetComponent<Interactable>();
+            ObjetoInteracao interactable = hit.collider.GetComponent<ObjetoInteracao>();
             if (interactable != null)
             {
                 interactable.Interact();

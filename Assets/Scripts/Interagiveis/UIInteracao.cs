@@ -1,7 +1,8 @@
 using UnityEngine;
 
-public class UIInterface : MonoBehaviour
+public class UIInteracao : MonoBehaviour
 {
+    public ObjetoInteracao objetoInteracaoRef;
     
     public void StartUI()
     {
