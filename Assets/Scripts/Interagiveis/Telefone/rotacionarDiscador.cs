@@ -187,26 +187,32 @@ public class RotacionarDiscador : MonoBehaviour
             {
                 case "Joao":
                     // chama a func dps desse tempo em segundos
-                    Invoke("LigarJoao", 1.5f);
+                    Invoke("FazerLigacaoJoao", 1.5f);
                     break;
                 case "Puzzle":
                     // chama a func dps desse tempo em segundos
-                    Invoke("FazerLigacao", 1.5f);
+                    Invoke("FazerLigacaoPuzzle", 1.5f);
                     break;
                 default:
                     break;
 
             }
-            
+
         }
     }
 
-
-    private void FazerLigacao()
+    private void FazerLigacaoPuzzle()
     {
         GameManagerTestNight.Instance.MostrarItens();
 
-        Flowchart.BroadcastFungusMessage("ligou_correto");
+        Flowchart.BroadcastFungusMessage("ligou_puzzle");
+    }
+
+    private void FazerLigacaoJoao()
+    {
+        GameManagerTestNight.Instance.MostrarItens();
+
+        Flowchart.BroadcastFungusMessage("ligou_joao");
     }
 
     public void ReconhecerDigito()
@@ -217,6 +223,7 @@ public class RotacionarDiscador : MonoBehaviour
         // percorre a lista, enquanto o angulo do disco for maior que o item da lista continue pegando os digitos
         // quando for menor, quer dizer que ja nao mais se aplica a aquele digito, entao pare e retorne o ultimo
         int melhorDigito = -1;
+
         foreach (DigitoAngulo item in angulosReconhecerDigitos)
         {
 
@@ -231,6 +238,8 @@ public class RotacionarDiscador : MonoBehaviour
         }
 
         lastDigito = melhorDigito;
+
+        if (melhorDigito == -1) { return; }
 
         TextoNumero.UpdateDigitoTextoNumero(melhorDigito);
     }
