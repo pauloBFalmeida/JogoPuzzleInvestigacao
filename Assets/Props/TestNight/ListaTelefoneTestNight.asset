@@ -13,5 +13,7 @@ MonoBehaviour:
   m_Name: ListaTelefoneTestNight
   m_EditorClassIdentifier: Assembly-CSharp::ListaTelefonicaSO
   nomeNumeros:
-  - nome: Fantasma
-    telefone: 111
+  - nome: Puzzle
+    telefone: 201145
+  - nome: Joao
+    telefone: 98

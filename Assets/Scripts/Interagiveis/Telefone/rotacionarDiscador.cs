@@ -182,8 +182,22 @@ public class RotacionarDiscador : MonoBehaviour
         if (listaTelefonica.IsNumeroValido(numeroDiscado))
         {
             string nome = listaTelefonica.GetNomeParaNumero(numeroDiscado);
-            // chama a func dps desse tempo em segundos
-            Invoke("FazerLigacao", 1.5f);
+
+            switch (nome)
+            {
+                case "Joao":
+                    // chama a func dps desse tempo em segundos
+                    Invoke("LigarJoao", 1.5f);
+                    break;
+                case "Puzzle":
+                    // chama a func dps desse tempo em segundos
+                    Invoke("FazerLigacao", 1.5f);
+                    break;
+                default:
+                    break;
+
+            }
+            
         }
     }
 
