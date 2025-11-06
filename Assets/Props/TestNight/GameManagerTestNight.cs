@@ -21,6 +21,16 @@ public class GameManagerTestNight : MonoBehaviour
     public List<GameObject> itensClicaveis = new();
     private GameObject itemSendoMostrado;
 
+    public void EsconderTudo()
+    {
+        foreach (GameObject obj in itensClicaveis) { obj.SetActive(false); }
+    }
+    
+    public void MostrarTudo()
+    {
+        foreach (GameObject obj in itensClicaveis) { obj.SetActive(true); }
+    }
+
     public void EsconderItens(GameObject itemMostrar)
     {
         // mostra hitbox para sair da ui
