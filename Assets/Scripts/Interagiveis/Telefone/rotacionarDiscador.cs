@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using System.Collections.Generic;
+using Fungus;
 
 [System.Serializable]
 public struct DigitoAngulo
@@ -169,14 +170,28 @@ public class RotacionarDiscador : MonoBehaviour
         transform.rotation = Quaternion.Euler(0, 0, currentAngle);
     }
 
+    public ListaTelefonicaSO listaTelefonica;
+    private string numeroDiscado = "";
     private void PegarDigito()
     {
-        TextoNumero.UpdateNumero();
-        // if (listaTelefonica.IsNumeroValido(currNumero))
-        // {
-        //     objetoInteracaoRef.receberFeedback(currNumero);
-        //     Hide();
-        // }
+        numeroDiscado = numeroDiscado + lastDigito.ToString();
+
+        TextoNumero.UpdateNumero(numeroDiscado);
+
+        if (listaTelefonica.IsNumeroValido(numeroDiscado))
+        {
+            string nome = listaTelefonica.GetNomeParaNumero(numeroDiscado);
+            // chama a func dps desse tempo em segundos
+            Invoke("FazerLigacao", 1.5f);
+        }
+    }
+
+
+    private void FazerLigacao()
+    {
+        GameManagerTestNight.Instance.MostrarItens();
+
+        Flowchart.BroadcastFungusMessage("ligou_correto");
     }
 
     public void ReconhecerDigito()

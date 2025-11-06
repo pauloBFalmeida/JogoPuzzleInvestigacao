@@ -26,8 +26,8 @@ public class TextoDiscador : MonoBehaviour
         TextMesh.text = numeroConfirmado + digitoAtual;
     }
     
-    public void UpdateNumero()
+    public void UpdateNumero(string numeroDiscado)
     {
-        numeroConfirmado = numeroConfirmado + digitoAtual;
+        numeroConfirmado = numeroDiscado;
     }
 }

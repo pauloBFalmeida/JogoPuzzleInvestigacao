@@ -417,6 +417,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 260779980901039535, guid: fd9e6f60812da42458e10f9bf9d7f8c6, type: 3}
+      propertyPath: listaTelefonica
+      value: 
+      objectReference: {fileID: 11400000, guid: bc5c6c471efc71a4db31812d53e6a426, type: 2}
     - target: {fileID: 2858677409246494731, guid: fd9e6f60812da42458e10f9bf9d7f8c6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -671,6 +675,10 @@ GameObject:
   - component: {fileID: 755900954}
   - component: {fileID: 755900953}
   - component: {fileID: 755900951}
+  - component: {fileID: 755900955}
+  - component: {fileID: 755900957}
+  - component: {fileID: 755900956}
+  - component: {fileID: 755900958}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -691,7 +699,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: -76.095, y: 11.5}
+  scrollPos: {x: -40.095, y: -16.5}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
@@ -703,9 +711,8 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 755900952}
-  selectedCommands:
-  - {fileID: 755900951}
+  - {fileID: 755900955}
+  selectedCommands: []
   variables: []
   description: 
   stepPause: 0
@@ -947,12 +954,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Fungus::Fungus.Block
   nodeRect:
     serializedVersion: 2
-    x: 576.095
-    y: 115.5
+    x: 573.095
+    y: 112.5
     width: 161.1
     height: 40
-  tint: {r: 1, g: 1, b: 1, a: 1}
-  useCustomTint: 0
+  tint: {r: 0.6824076, g: 1, b: 0.6273585, a: 1}
+  useCustomTint: 1
   itemId: 7
   blockName: Comecar Gameplay
   description: 
@@ -999,6 +1006,103 @@ MonoBehaviour:
     stringVal: 
   startIndex: 0
   callMode: 0
+--- !u!114 &755900955
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 755900940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fungus::Fungus.Block
+  nodeRect:
+    serializedVersion: 2
+    x: 115
+    y: 236
+    width: 122.61
+    height: 40
+  tint: {r: 1, g: 0.5896226, b: 0.9875596, a: 1}
+  useCustomTint: 1
+  itemId: 14
+  blockName: Dialogo Final
+  description: 
+  eventHandler: {fileID: 755900958}
+  commandList:
+  - {fileID: 755900957}
+  - {fileID: 755900956}
+  suppressAllAutoSelections: 0
+--- !u!114 &755900956
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 755900940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fungus::Fungus.Say
+  itemId: 13
+  indentLevel: 0
+  storyText: "nois \xE9 brabo"
+  description: 
+  character: {fileID: 433117146}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &755900957
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 755900940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fungus::Fungus.Say
+  itemId: 12
+  indentLevel: 0
+  storyText: Zamn vc sabia meu zap
+  description: 
+  character: {fileID: 190958116}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &755900958
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 755900940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d7d417659cd54a6787f70f763950c34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fungus::Fungus.MessageReceived
+  parentBlock: {fileID: 755900955}
+  suppressBlockAutoSelect: 0
+  message: ligou_correto
 --- !u!1 &773728696
 GameObject:
   m_ObjectHideFlags: 0
