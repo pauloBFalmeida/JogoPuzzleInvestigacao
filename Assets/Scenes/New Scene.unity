@@ -265,8 +265,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 230446638}
+  - component: {fileID: 230446640}
+  - component: {fileID: 230446639}
   m_Layer: 0
-  m_Name: pivot
+  m_Name: pivotDiscador
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -280,13 +282,86 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 230446637}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.106, y: -0.161, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1722059787}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &230446639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 230446637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79bcbc2c81b857143897140c1a8562de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::rotacionarDiscador
+  returnSpeed: 2
+  limAngle: 32
+  rotationSmoothness: 8
+  angulosReconhecerDigitos:
+  - digito: 1
+    angulo: 315
+  - digito: 2
+    angulo: 290
+  - digito: 3
+    angulo: 260
+  - digito: 4
+    angulo: 230
+  - digito: 5
+    angulo: 200
+  - digito: 6
+    angulo: 175
+  - digito: 7
+    angulo: 145
+  - digito: 8
+    angulo: 115
+  - digito: 9
+    angulo: 80
+  - digito: 0
+    angulo: 45
+--- !u!58 &230446640
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 230446637}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 1.0534885
 --- !u!1 &333134425
 GameObject:
   m_ObjectHideFlags: 0
@@ -604,8 +679,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1722059787}
   - component: {fileID: 1722059788}
-  - component: {fileID: 1722059789}
-  - component: {fileID: 1722059790}
   m_Layer: 0
   m_Name: Discador
   m_TagString: Untagged
@@ -622,11 +695,11 @@ Transform:
   m_GameObject: {fileID: 1722059786}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.106, y: 0.161, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 230446638}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1722059788
 SpriteRenderer:
@@ -686,56 +759,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1722059789
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1722059786}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79bcbc2c81b857143897140c1a8562de, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::rotacionarDiscador
-  rotationSpeed: 30
-  pivotPoint: {fileID: 230446638}
---- !u!58 &1722059790
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1722059786}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0.069392204, y: -0.17733526}
-  m_Radius: 1.0364413
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -744,5 +767,4 @@ SceneRoots:
   - {fileID: 1108269877}
   - {fileID: 333134427}
   - {fileID: 230446638}
-  - {fileID: 1722059787}
   - {fileID: 815211803}

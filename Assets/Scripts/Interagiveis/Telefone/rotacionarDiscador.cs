@@ -1,19 +1,28 @@
 using System;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using System.Collections.Generic;
 
+[System.Serializable]
+public struct DigitoAngulo
+{
+    public int digito;
+    public float angulo;
+}
 public class rotacionarDiscador : MonoBehaviour
 {
 
     [Header("Configurações")]
     [SerializeField] private float returnSpeed = 2f;
-     [SerializeField] private float limAngle = -32f; // limite maximo que pode puxar
+    [SerializeField] private float limAngle = -32f; // limite maximo que pode puxar
     [SerializeField] private float rotationSmoothness = 8f;
-    
+    [SerializeField] private List<DigitoAngulo> angulosReconhecerDigitos = new();
+
     private bool isDragging = false;
     private float initialAngleOffset;
     private Quaternion initialRotation;
     private bool jaPassouMetade = false;
+    private float lastTargetAngle = 0f;
 
     void Start()
     {
@@ -26,6 +35,8 @@ public class rotacionarDiscador : MonoBehaviour
         {
             // Segue exatamente o angulo do mouse
             FollowMouseAngle();
+            // mostar o digito atual
+            ReconhecerDigito();
         }
         else
         {
@@ -37,10 +48,12 @@ public class rotacionarDiscador : MonoBehaviour
     void OnMouseDown()
     {
         StartDragging();
+        jaPassouMetade = false;
     }
 
     void OnMouseUp()
     {
+        PegarDigito();
         StopDragging();
     }
 
@@ -48,8 +61,6 @@ public class rotacionarDiscador : MonoBehaviour
     {
         isDragging = true;
 
-        jaPassouMetade = false;
-        
         // Calcula o offset inicial entre o angulo atual e o angulo do mouse
         Vector3 mousePosition = GetMouseWorldPosition();
         float currentAngle = transform.eulerAngles.z;
@@ -73,13 +84,14 @@ public class rotacionarDiscador : MonoBehaviour
 
         if (targetAngle < 150 && targetAngle > 100) { jaPassouMetade = true; }
 
-         if (jaPassouMetade)
+        if (jaPassouMetade)
         {
             if (targetAngle < limAngle || targetAngle > 270)
             {
                 targetAngle = limAngle;
             }
-        } else
+        }
+        else
         {
             if (targetAngle < 90)
             {
@@ -87,24 +99,24 @@ public class rotacionarDiscador : MonoBehaviour
             }
         }
 
-        if (targetAngle < limAngle)
-        {
-            // vindo inicio (posicao inicial forcada para baixo) 
-            // if (targetAngle < limAngle/2)
-            // {
-            //     targetAngle = 0f;
-            //     Debug.Log("vindo inicio ");
-            // } else
-            // {
-            //     targetAngle = limAngle;
-            //     Debug.Log("voltando ");
-            // }
+        // if (targetAngle < limAngle)
+        // {
+        //     // vindo inicio (posicao inicial forcada para baixo) 
+        //     // if (targetAngle < limAngle/2)
+        //     // {
+        //     //     targetAngle = 0f;
+        //     //     Debug.Log("vindo inicio ");
+        //     // } else
+        //     // {
+        //     //     targetAngle = limAngle;
+        //     //     Debug.Log("voltando ");
+        //     // }
 
-        }
+        // }
 
+        transform.rotation = Quaternion.Euler(0, 0, targetAngle);
 
-        Debug.Log("targetAngle " + targetAngle);
-        transform.rotation = Quaternion.Euler(0, 0, targetAngle);        
+        lastTargetAngle = targetAngle;
     }
 
     private float GetAngleToMouse(Vector3 mousePosition)
@@ -114,7 +126,7 @@ public class rotacionarDiscador : MonoBehaviour
 
         // Calcula o angulo em graus (-180 a 180)
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        
+
         if (angle > 0)
         {
             angle -= 360f; // Converte para -360 a 0
@@ -131,28 +143,53 @@ public class rotacionarDiscador : MonoBehaviour
         mousePos.z = -Camera.main.transform.position.z;
         return Camera.main.ScreenToWorldPoint(mousePos);
     }
-    
 
     private void ReturnClockwiseToInitial()
     {
         float currentAngle = transform.eulerAngles.z;
         // Calcula o ângulo alvo
         float targetAngle = initialRotation.eulerAngles.z;
-        
+
         // Se o ângulo atual for maior que o alvo, adiciona 360 ao alvo
         // para forçar o caminho anti-horário
         if (currentAngle > targetAngle)
         {
             targetAngle += 360f;
         }
-        
+
         // Interpola o ângulo
         currentAngle = Mathf.Lerp(currentAngle, targetAngle, Time.deltaTime * returnSpeed);
-        
+
         // Normaliza o ângulo para evitar valores muito grandes
         if (currentAngle >= 360f) currentAngle -= 360f;
-        
+
         // Aplica a rotação
         transform.rotation = Quaternion.Euler(0, 0, currentAngle);
+    }
+
+    private void PegarDigito()
+    {
+        
+    }
+
+    public void ReconhecerDigito()
+    {
+        // percorre a lista, enquanto o angulo do disco for maior que o item da lista continue pegando os digitos
+        // quando for menor, quer dizer que ja nao mais se aplica a aquele digito, entao pare e retorne o ultimo
+        int melhorDigito = -1;
+        foreach (DigitoAngulo item in angulosReconhecerDigitos)
+        {
+
+            if (item.angulo > lastTargetAngle)
+            {
+                melhorDigito = item.digito;
+            }
+            else
+            {
+                break;
+            }
+        }
+        // Debug.Log("lastTargetAngle " + lastTargetAngle);
+        // Debug.Log("melhorDigito " + melhorDigito);
     }
 }
