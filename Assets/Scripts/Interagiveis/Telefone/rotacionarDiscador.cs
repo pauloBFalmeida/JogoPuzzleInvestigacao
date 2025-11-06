@@ -18,6 +18,7 @@ public class RotacionarDiscador : MonoBehaviour
     [SerializeField] private float rotationSmoothness = 8f;
     [SerializeField] private List<DigitoAngulo> angulosReconhecerDigitos = new();
     [SerializeField] public TextoDiscador TextoNumero;
+    public EscritorDados escritorDados;
 
     private bool isDragging = false;
     private float initialAngleOffset;
@@ -196,7 +197,8 @@ public class RotacionarDiscador : MonoBehaviour
 
     public void ReconhecerDigito()
     {
-        if (lastTargetAngle > 350 || lastTargetAngle < limAngle -1) { return; };
+        if (lastTargetAngle > 350 || lastTargetAngle < limAngle - 1) { return; }
+        ;
 
         // percorre a lista, enquanto o angulo do disco for maior que o item da lista continue pegando os digitos
         // quando for menor, quer dizer que ja nao mais se aplica a aquele digito, entao pare e retorne o ultimo
@@ -217,5 +219,15 @@ public class RotacionarDiscador : MonoBehaviour
         lastDigito = melhorDigito;
 
         TextoNumero.UpdateDigitoTextoNumero(melhorDigito);
+    }
+    
+    public void SairDiscagem()
+    {
+        escritorDados.EscreverTexto(numeroDiscado);
+
+        // limpa os valores
+        TextoNumero.UpdateNumero("");
+        numeroDiscado = "";
+        lastDigito = -1;
     }
 }

@@ -50,7 +50,14 @@ public class GameManagerTestNight : MonoBehaviour
         // esconde hitbox para sair da ui
         hitboxSairUI.SetActive(false);
         // esconde a ui atual
-        if (itemSendoMostrado != null) { itemSendoMostrado.SetActive(false); }
+        if (itemSendoMostrado != null) {
+            itemSendoMostrado.SetActive(false); 
+            // passa a info q fechou   
+            if (itemSendoMostrado.TryGetComponent<TelefoneWrapper>(out TelefoneWrapper telefoneWrapper))
+            {
+                telefoneWrapper.discador.SairDiscagem();
+            }
+        }
 
         // mostra os itens clicaveis do cenario
         foreach (GameObject obj in itensClicaveis)
