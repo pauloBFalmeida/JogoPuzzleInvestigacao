@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -5,12 +6,14 @@ public class rotacionarDiscador : MonoBehaviour
 {
 
     [Header("Configurações")]
-    [SerializeField] private float returnSpeed = 120f;
+    [SerializeField] private float returnSpeed = 2f;
+     [SerializeField] private float limAngle = -32f; // limite maximo que pode puxar
     [SerializeField] private float rotationSmoothness = 8f;
     
     private bool isDragging = false;
     private float initialAngleOffset;
-    private Quaternion  initialRotation;
+    private Quaternion initialRotation;
+    private bool jaPassouMetade = false;
 
     void Start()
     {
@@ -27,7 +30,7 @@ public class rotacionarDiscador : MonoBehaviour
         else
         {
             // Retorna suavemente para a rotacao inicial
-            transform.rotation = Quaternion.Lerp(transform.rotation, initialRotation, Time.deltaTime * returnSpeed);
+            ReturnClockwiseToInitial();
         }
     }
 
@@ -44,6 +47,8 @@ public class rotacionarDiscador : MonoBehaviour
     private void StartDragging()
     {
         isDragging = true;
+
+        jaPassouMetade = false;
         
         // Calcula o offset inicial entre o angulo atual e o angulo do mouse
         Vector3 mousePosition = GetMouseWorldPosition();
@@ -63,9 +68,43 @@ public class rotacionarDiscador : MonoBehaviour
         Vector3 mousePosition = GetMouseWorldPosition();
         float targetAngle = GetAngleToMouse(mousePosition) + initialAngleOffset;
 
-        // Aplica a rotacao para seguir exatamente o mouse
-        transform.rotation = Quaternion.Euler(0, 0, targetAngle);
-        
+        if (targetAngle > 360) { targetAngle -= 360f; }
+        if (targetAngle < 0) { targetAngle += 360f; }
+
+        if (targetAngle < 150 && targetAngle > 100) { jaPassouMetade = true; }
+
+         if (jaPassouMetade)
+        {
+            if (targetAngle < limAngle || targetAngle > 270)
+            {
+                targetAngle = limAngle;
+            }
+        } else
+        {
+            if (targetAngle < 90)
+            {
+                targetAngle = 0f;
+            }
+        }
+
+        if (targetAngle < limAngle)
+        {
+            // vindo inicio (posicao inicial forcada para baixo) 
+            // if (targetAngle < limAngle/2)
+            // {
+            //     targetAngle = 0f;
+            //     Debug.Log("vindo inicio ");
+            // } else
+            // {
+            //     targetAngle = limAngle;
+            //     Debug.Log("voltando ");
+            // }
+
+        }
+
+
+        Debug.Log("targetAngle " + targetAngle);
+        transform.rotation = Quaternion.Euler(0, 0, targetAngle);        
     }
 
     private float GetAngleToMouse(Vector3 mousePosition)
@@ -76,15 +115,44 @@ public class rotacionarDiscador : MonoBehaviour
         // Calcula o angulo em graus (-180 a 180)
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         
+        if (angle > 0)
+        {
+            angle -= 360f; // Converte para -360 a 0
+        }
+
         return angle;
     }
 
     private Vector3 GetMouseWorldPosition()
     {
         Vector3 mousePos = Input.mousePosition;
-        
+
         // Para objetos no mundo 2D
         mousePos.z = -Camera.main.transform.position.z;
         return Camera.main.ScreenToWorldPoint(mousePos);
+    }
+    
+
+    private void ReturnClockwiseToInitial()
+    {
+        float currentAngle = transform.eulerAngles.z;
+        // Calcula o ângulo alvo
+        float targetAngle = initialRotation.eulerAngles.z;
+        
+        // Se o ângulo atual for maior que o alvo, adiciona 360 ao alvo
+        // para forçar o caminho anti-horário
+        if (currentAngle > targetAngle)
+        {
+            targetAngle += 360f;
+        }
+        
+        // Interpola o ângulo
+        currentAngle = Mathf.Lerp(currentAngle, targetAngle, Time.deltaTime * returnSpeed);
+        
+        // Normaliza o ângulo para evitar valores muito grandes
+        if (currentAngle >= 360f) currentAngle -= 360f;
+        
+        // Aplica a rotação
+        transform.rotation = Quaternion.Euler(0, 0, currentAngle);
     }
 }
