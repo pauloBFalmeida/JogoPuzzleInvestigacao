@@ -1,6 +1,5 @@
 using System;
 using UnityEngine;
-using UnityEngine.EventSystems;
 using System.Collections.Generic;
 
 [System.Serializable]
@@ -9,7 +8,7 @@ public struct DigitoAngulo
     public int digito;
     public float angulo;
 }
-public class rotacionarDiscador : MonoBehaviour
+public class RotacionarDiscador : MonoBehaviour
 {
 
     [Header("Configurações")]
@@ -17,12 +16,15 @@ public class rotacionarDiscador : MonoBehaviour
     [SerializeField] private float limAngle = -32f; // limite maximo que pode puxar
     [SerializeField] private float rotationSmoothness = 8f;
     [SerializeField] private List<DigitoAngulo> angulosReconhecerDigitos = new();
+    [SerializeField] public TextoDiscador TextoNumero;
 
     private bool isDragging = false;
     private float initialAngleOffset;
     private Quaternion initialRotation;
     private bool jaPassouMetade = false;
+
     private float lastTargetAngle = 0f;
+    private int lastDigito = -1;
 
     void Start()
     {
@@ -169,11 +171,13 @@ public class rotacionarDiscador : MonoBehaviour
 
     private void PegarDigito()
     {
-        
+        TextoNumero.UpdateNumero();
     }
 
     public void ReconhecerDigito()
     {
+        if (lastTargetAngle > 350 || lastTargetAngle < limAngle -1) { return; };
+
         // percorre a lista, enquanto o angulo do disco for maior que o item da lista continue pegando os digitos
         // quando for menor, quer dizer que ja nao mais se aplica a aquele digito, entao pare e retorne o ultimo
         int melhorDigito = -1;
@@ -189,7 +193,9 @@ public class rotacionarDiscador : MonoBehaviour
                 break;
             }
         }
-        // Debug.Log("lastTargetAngle " + lastTargetAngle);
-        // Debug.Log("melhorDigito " + melhorDigito);
+
+        lastDigito = melhorDigito;
+
+        TextoNumero.UpdateDigitoTextoNumero(melhorDigito);
     }
 }
