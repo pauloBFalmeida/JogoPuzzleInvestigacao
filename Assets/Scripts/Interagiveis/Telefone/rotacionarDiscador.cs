@@ -55,8 +55,8 @@ public class RotacionarDiscador : MonoBehaviour
 
     void OnMouseUp()
     {
-        PegarDigito();
         StopDragging();
+        PegarDigito();
     }
 
     private void StartDragging()
@@ -172,6 +172,11 @@ public class RotacionarDiscador : MonoBehaviour
     private void PegarDigito()
     {
         TextoNumero.UpdateNumero();
+        // if (listaTelefonica.IsNumeroValido(currNumero))
+        // {
+        //     objetoInteracaoRef.receberFeedback(currNumero);
+        //     Hide();
+        // }
     }
 
     public void ReconhecerDigito()
