@@ -390,7 +390,7 @@ MonoBehaviour:
     angulo: 45
   TextoNumero: {fileID: 8753504999803992068}
   escritorDados: {fileID: 0}
-  listaTelefonica: {fileID: 0}
+  listaTelefonica: {fileID: 11400000, guid: d0a2363904ab262408c222643c3f3b44, type: 2}
 --- !u!1 &6361355891310172540
 GameObject:
   m_ObjectHideFlags: 0

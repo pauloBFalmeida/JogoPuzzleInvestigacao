@@ -123,6 +123,10 @@ public class RotacionarDiscador : MonoBehaviour
         lastTargetAngle = targetAngle;
     }
 
+    /*
+        Retorna o angulo de [0.0, 360.0] do mouse com o centro do objeto
+        Seguindo o padrao da circulo trigonometrico: 0 a direita, 90 a cima, 180 a esquerda e 270 em baixo
+    */
     private float GetAngleToMouse(Vector3 mousePosition)
     {
         // Calcula a direcao do centro ate o mouse
@@ -130,11 +134,9 @@ public class RotacionarDiscador : MonoBehaviour
 
         // Calcula o angulo em graus (-180 a 180)
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-
-        if (angle > 0)
-        {
-            angle -= 360f; // Converte para -360 a 0
-        }
+        // converte de [-180.0, 180.0] -> [0.0, 360.0] 
+        angle += 360f;
+        if (angle > 360) { angle -= 360; }
 
         return angle;
     }
@@ -151,6 +153,15 @@ public class RotacionarDiscador : MonoBehaviour
     private void ReturnClockwiseToInitial()
     {
         float currentAngle = transform.eulerAngles.z;
+
+        // se for muito pequeno apena zera a rotacao
+        if (    Math.Abs(currentAngle) < 1 ||                                       // proximo de +- 0
+                (Math.Abs(currentAngle) < 361 && Math.Abs(currentAngle) > 359))     // proximo de +- 360
+            {
+            transform.rotation = Quaternion.Euler(0, 0, 0);
+            return;
+        }
+
         // Calcula o ângulo alvo
         float targetAngle = initialRotation.eulerAngles.z;
 
@@ -218,7 +229,6 @@ public class RotacionarDiscador : MonoBehaviour
     public void ReconhecerDigito()
     {
         if (lastTargetAngle > 350 || lastTargetAngle < limAngle - 1) { return; }
-        ;
 
         // percorre a lista, enquanto o angulo do disco for maior que o item da lista continue pegando os digitos
         // quando for menor, quer dizer que ja nao mais se aplica a aquele digito, entao pare e retorne o ultimo
