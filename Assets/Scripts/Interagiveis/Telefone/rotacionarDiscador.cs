@@ -65,9 +65,9 @@ public class RotacionarDiscador : MonoBehaviour
 
         // Calcula o offset inicial entre o angulo atual e o angulo do mouse
         Vector3 mousePosition = GetMouseWorldPosition();
-        float currentAngle = transform.eulerAngles.z;
+        float currentRotation = transform.eulerAngles.z;
         float mouseAngle = GetAngleToMouse(mousePosition);
-        initialAngleOffset = currentAngle - mouseAngle;
+        initialAngleOffset = currentRotation - mouseAngle;
     }
 
     private void StopDragging()
@@ -75,49 +75,34 @@ public class RotacionarDiscador : MonoBehaviour
         isDragging = false;
     }
 
+    private float prevTargetAngle = -1f;
     private void FollowMouseAngle()
     {
         // pega o angulo que tem que rodar
         Vector3 mousePosition = GetMouseWorldPosition();
         float targetAngle = GetAngleToMouse(mousePosition) + initialAngleOffset;
-
+        // converte para [0.0, 360.0]
         if (targetAngle > 360) { targetAngle -= 360f; }
         if (targetAngle < 0) { targetAngle += 360f; }
 
-        if (targetAngle < 150 && targetAngle > 100) { jaPassouMetade = true; }
 
-        if (jaPassouMetade)
+        // esta voltando na direcao que ja passou
+        if (targetAngle > prevTargetAngle && (targetAngle < 350))
         {
-            if (targetAngle < limAngle || targetAngle > 270)
-            {
-                targetAngle = limAngle;
-            }
-        }
-        else
-        {
-            if (targetAngle < 90)
-            {
-                targetAngle = 0f;
-            }
+            targetAngle = prevTargetAngle;
         }
 
-        // if (targetAngle < limAngle)
-        // {
-        //     // vindo inicio (posicao inicial forcada para baixo) 
-        //     // if (targetAngle < limAngle/2)
-        //     // {
-        //     //     targetAngle = 0f;
-        //     //     Debug.Log("vindo inicio ");
-        //     // } else
-        //     // {
-        //     //     targetAngle = limAngle;
-        //     //     Debug.Log("voltando ");
-        //     // }
+        prevTargetAngle = targetAngle;
 
-        // }
+        // impede de passar do final
+        if (targetAngle < limAngle)
+        {
+            targetAngle = limAngle;
+        }
 
+        // aplica a rotacao
         transform.rotation = Quaternion.Euler(0, 0, targetAngle);
-
+        // salva o ultimo angulo durante o seguir o mouse
         lastTargetAngle = targetAngle;
     }
 
