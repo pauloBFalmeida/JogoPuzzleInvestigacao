@@ -1,30 +1,22 @@
 using System;
 using UnityEngine;
-using System.Collections.Generic;
 using Fungus;
 
-[System.Serializable]
-public struct DigitoAngulo
-{
-    public int digito;
-    public float angulo;
-}
+
 public class RotacionarDiscador : MonoBehaviour
 {
 
     [Header("Configurações")]
-    [SerializeField] private float returnSpeed = 2f;
-    [SerializeField] private float limAngle = -32f; // limite maximo que pode puxar
-    [SerializeField] private List<DigitoAngulo> angulosReconhecerDigitos = new();
-    [SerializeField] public TextoDiscador TextoNumero;
+     private float returnSpeed = 2f;
+    public TextoDiscador TextoNumero;
 
     private bool isDragging = false;
     private float initialAngleOffset;
     private Quaternion initialRotation;
-    private bool jaPassouMetade = false;
 
-    private float lastTargetAngle = 0f;
-    private int lastDigito = -1;
+    private int ultimoDigitoDiscado = -1;
+    private bool chegouLimiteRotacao = false;
+    private bool passouPeloDigito9 = false;
 
     void Start()
     {
@@ -37,8 +29,6 @@ public class RotacionarDiscador : MonoBehaviour
         {
             // Segue exatamente o angulo do mouse
             FollowMouseAngle();
-            // mostar o digito atual
-            ReconhecerDigito();
         }
         else
         {
@@ -50,13 +40,12 @@ public class RotacionarDiscador : MonoBehaviour
     void OnMouseDown()
     {
         StartDragging();
-        jaPassouMetade = false;
     }
 
     void OnMouseUp()
     {
-        StopDragging();
         PegarDigito();
+        StopDragging();
     }
 
     private void StartDragging()
@@ -73,11 +62,15 @@ public class RotacionarDiscador : MonoBehaviour
     private void StopDragging()
     {
         isDragging = false;
+        chegouLimiteRotacao = false;
+        passouPeloDigito9 = false;
+        ultimoDigitoDiscado = -1;
     }
 
-    private float prevTargetAngle = -1f;
     private void FollowMouseAngle()
     {
+        if (chegouLimiteRotacao) return;
+
         // pega o angulo que tem que rodar
         Vector3 mousePosition = GetMouseWorldPosition();
         float targetAngle = GetAngleToMouse(mousePosition) + initialAngleOffset;
@@ -85,27 +78,33 @@ public class RotacionarDiscador : MonoBehaviour
         if (targetAngle > 360) { targetAngle -= 360f; }
         if (targetAngle < 0) { targetAngle += 360f; }
 
-
-        // esta voltando na direcao que ja passou
-        if (targetAngle > prevTargetAngle && (targetAngle < 350))
-        {
-            targetAngle = prevTargetAngle;
-        }
-
-        prevTargetAngle = targetAngle;
-
-        // impede de passar do final
-        if (targetAngle < limAngle)
-        {
-            targetAngle = limAngle;
-        }
-
         // aplica a rotacao
         transform.rotation = Quaternion.Euler(0, 0, targetAngle);
-        // salva o ultimo angulo durante o seguir o mouse
-        lastTargetAngle = targetAngle;
     }
 
+    public void LimitRotation()
+    {
+        chegouLimiteRotacao = true;
+    }
+
+    public void PassouDigito(int digito)
+    {
+        // se passou pelo 0 antes de passar pelo 9, quer dizer que veio do lado oposto
+        if (digito == 0 && !passouPeloDigito9)
+        {
+            ResetRotation();
+            return;
+        }
+        // marca que passou pelo digito 9 
+        if (digito == 9) passouPeloDigito9 = true;
+
+        ultimoDigitoDiscado = digito;
+        // se estiver segurando mouse -> atualiza o mostrador 
+        if (isDragging)
+        {
+            TextoNumero.UpdateDigitoTextoNumero(digito);
+        }
+    }
     /*
         Retorna o angulo de [0.0, 360.0] do mouse com o centro do objeto
         Seguindo o padrao da circulo trigonometrico: 0 a direita, 90 a cima, 180 a esquerda e 270 em baixo
@@ -133,6 +132,11 @@ public class RotacionarDiscador : MonoBehaviour
         return Camera.main.ScreenToWorldPoint(mousePos);
     }
 
+    private void ResetRotation()
+    {
+        transform.rotation = Quaternion.Euler(0, 0, 0);
+    }
+
     private void ReturnClockwiseToInitial()
     {
         float currentAngle = transform.eulerAngles.z;
@@ -141,7 +145,7 @@ public class RotacionarDiscador : MonoBehaviour
         if (    Math.Abs(currentAngle) < 1 ||                                       // proximo de +- 0
                 (Math.Abs(currentAngle) < 361 && Math.Abs(currentAngle) > 359))     // proximo de +- 360
             {
-            transform.rotation = Quaternion.Euler(0, 0, 0);
+            ResetRotation();
             return;
         }
 
@@ -169,7 +173,10 @@ public class RotacionarDiscador : MonoBehaviour
     private string numeroDiscado = "";
     private void PegarDigito()
     {
-        numeroDiscado = numeroDiscado + lastDigito.ToString();
+        // ignora digitos que nao sao [0, 9]
+        if (ultimoDigitoDiscado < 0 || ultimoDigitoDiscado > 9) return;
+
+        numeroDiscado = numeroDiscado + ultimoDigitoDiscado.ToString();
 
         TextoNumero.UpdateNumero(numeroDiscado);
 
@@ -208,40 +215,12 @@ public class RotacionarDiscador : MonoBehaviour
 
         Flowchart.BroadcastFungusMessage("ligou_joao");
     }
-
-    public void ReconhecerDigito()
-    {
-        if (lastTargetAngle > 350 || lastTargetAngle < limAngle - 1) { return; }
-
-        // percorre a lista, enquanto o angulo do disco for maior que o item da lista continue pegando os digitos
-        // quando for menor, quer dizer que ja nao mais se aplica a aquele digito, entao pare e retorne o ultimo
-        int melhorDigito = -1;
-
-        foreach (DigitoAngulo item in angulosReconhecerDigitos)
-        {
-
-            if (item.angulo > lastTargetAngle)
-            {
-                melhorDigito = item.digito;
-            }
-            else
-            {
-                break;
-            }
-        }
-
-        lastDigito = melhorDigito;
-
-        if (melhorDigito == -1) { return; }
-
-        TextoNumero.UpdateDigitoTextoNumero(melhorDigito);
-    }
     
     public void SairDiscagem()
     {
         // limpa os valores
         TextoNumero.UpdateNumero("");
         numeroDiscado = "";
-        lastDigito = -1;
+        ultimoDigitoDiscado = -1;
     }
 }
