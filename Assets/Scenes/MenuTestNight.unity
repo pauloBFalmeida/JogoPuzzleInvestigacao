@@ -1267,6 +1267,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EscritorDados
       objectReference: {fileID: 0}
+    - target: {fileID: 3314141995236419664, guid: 37a4749e7bcc69d46aaa7c62c62483d1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5696748629263867906, guid: 37a4749e7bcc69d46aaa7c62c62483d1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 401
