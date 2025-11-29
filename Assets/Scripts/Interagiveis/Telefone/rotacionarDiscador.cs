@@ -15,10 +15,8 @@ public class RotacionarDiscador : MonoBehaviour
     [Header("Configurações")]
     [SerializeField] private float returnSpeed = 2f;
     [SerializeField] private float limAngle = -32f; // limite maximo que pode puxar
-    [SerializeField] private float rotationSmoothness = 8f;
     [SerializeField] private List<DigitoAngulo> angulosReconhecerDigitos = new();
     [SerializeField] public TextoDiscador TextoNumero;
-    public EscritorDados escritorDados;
 
     private bool isDragging = false;
     private float initialAngleOffset;
@@ -256,8 +254,6 @@ public class RotacionarDiscador : MonoBehaviour
     
     public void SairDiscagem()
     {
-        escritorDados.EscreverTexto(numeroDiscado);
-
         // limpa os valores
         TextoNumero.UpdateNumero("");
         numeroDiscado = "";
