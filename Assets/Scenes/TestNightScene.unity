@@ -792,7 +792,7 @@ PrefabInstance:
     - target: {fileID: 260779980901039535, guid: fd9e6f60812da42458e10f9bf9d7f8c6, type: 3}
       propertyPath: escritorDados
       value: 
-      objectReference: {fileID: 1332663139}
+      objectReference: {fileID: 0}
     - target: {fileID: 260779980901039535, guid: fd9e6f60812da42458e10f9bf9d7f8c6, type: 3}
       propertyPath: listaTelefonica
       value: 
@@ -1349,8 +1349,6 @@ GameObject:
   - component: {fileID: 755900980}
   - component: {fileID: 755900983}
   - component: {fileID: 755900982}
-  - component: {fileID: 755900985}
-  - component: {fileID: 755900984}
   - component: {fileID: 755900987}
   - component: {fileID: 755900986}
   - component: {fileID: 755900991}
@@ -1364,6 +1362,9 @@ GameObject:
   - component: {fileID: 755900992}
   - component: {fileID: 755900997}
   - component: {fileID: 755900998}
+  - component: {fileID: 755901005}
+  - component: {fileID: 755901004}
+  - component: {fileID: 755901003}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -1384,10 +1385,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 64.905, y: -78.5}
+  scrollPos: {x: 254.7813, y: 56.43815}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
-  blockViewHeight: 402
+  blockViewHeight: 400
   zoom: 1
   scrollViewRect:
     serializedVersion: 2
@@ -1395,10 +1396,8 @@ MonoBehaviour:
     y: -340
     width: 1114
     height: 859
-  selectedBlocks:
-  - {fileID: 755900943}
-  selectedCommands:
-  - {fileID: 755900965}
+  selectedBlocks: []
+  selectedCommands: []
   variables: []
   description: 
   stepPause: 0
@@ -1477,8 +1476,9 @@ MonoBehaviour:
   - {fileID: 755900965}
   - {fileID: 755900986}
   - {fileID: 755900964}
-  - {fileID: 755900985}
-  - {fileID: 755900984}
+  - {fileID: 755901005}
+  - {fileID: 755901004}
+  - {fileID: 755901003}
   - {fileID: 755900954}
   suppressAllAutoSelections: 0
 --- !u!114 &755900944
@@ -2377,66 +2377,6 @@ MonoBehaviour:
   move: 0
   shiftIntoPlace: 0
   waitUntilFinished: 0
---- !u!114 &755900984
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 755900940}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ac5ce55bc698fa4290939ef6e426501, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Fungus::Fungus.Portrait
-  itemId: 42
-  indentLevel: 0
-  display: 2
-  stage: {fileID: 0}
-  character: {fileID: 433117146}
-  replacedCharacter: {fileID: 0}
-  portrait: {fileID: 0}
-  offset: 0
-  fromPosition: {fileID: 0}
-  toPosition: {fileID: 0}
-  facing: 0
-  useDefaultSettings: 1
-  fadeDuration: 0.5
-  moveDuration: 1
-  shiftOffset: {x: 0, y: 0}
-  move: 0
-  shiftIntoPlace: 0
-  waitUntilFinished: 0
---- !u!114 &755900985
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 755900940}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ac5ce55bc698fa4290939ef6e426501, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Fungus::Fungus.Portrait
-  itemId: 41
-  indentLevel: 0
-  display: 2
-  stage: {fileID: 0}
-  character: {fileID: 190958116}
-  replacedCharacter: {fileID: 0}
-  portrait: {fileID: 0}
-  offset: 0
-  fromPosition: {fileID: 0}
-  toPosition: {fileID: 0}
-  facing: 0
-  useDefaultSettings: 1
-  fadeDuration: 0.5
-  moveDuration: 1
-  shiftOffset: {x: 0, y: 0}
-  move: 0
-  shiftIntoPlace: 0
-  waitUntilFinished: 0
 --- !u!114 &755900986
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -2758,6 +2698,81 @@ MonoBehaviour:
   stopVoiceover: 1
   waitForVO: 0
   setSayDialog: {fileID: 0}
+--- !u!114 &755901003
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 755900940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ac5ce55bc698fa4290939ef6e426501, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fungus::Fungus.Portrait
+  itemId: 83
+  indentLevel: 0
+  display: 2
+  stage: {fileID: 0}
+  character: {fileID: 433117146}
+  replacedCharacter: {fileID: 0}
+  portrait: {fileID: 0}
+  offset: 0
+  fromPosition: {fileID: 0}
+  toPosition: {fileID: 0}
+  facing: 0
+  useDefaultSettings: 1
+  fadeDuration: 0.5
+  moveDuration: 1
+  shiftOffset: {x: 0, y: 0}
+  move: 0
+  shiftIntoPlace: 0
+  waitUntilFinished: 0
+--- !u!114 &755901004
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 755900940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ac5ce55bc698fa4290939ef6e426501, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fungus::Fungus.Portrait
+  itemId: 82
+  indentLevel: 0
+  display: 2
+  stage: {fileID: 0}
+  character: {fileID: 190958116}
+  replacedCharacter: {fileID: 0}
+  portrait: {fileID: 0}
+  offset: 0
+  fromPosition: {fileID: 0}
+  toPosition: {fileID: 0}
+  facing: 0
+  useDefaultSettings: 1
+  fadeDuration: 0.5
+  moveDuration: 1
+  shiftOffset: {x: 0, y: 0}
+  move: 0
+  shiftIntoPlace: 0
+  waitUntilFinished: 0
+--- !u!114 &755901005
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 755900940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea4da378c47144a86979765ac5e9690c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fungus::Fungus.Label
+  itemId: 81
+  indentLevel: 0
+  key: FimDialogo
 --- !u!1 &770960006
 GameObject:
   m_ObjectHideFlags: 0
@@ -2959,67 +2974,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Clicavel
   itemMostrar: {fileID: 1117324728}
---- !u!1001 &777643191
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3314141995236419664, guid: 37a4749e7bcc69d46aaa7c62c62483d1, type: 3}
-      propertyPath: m_Name
-      value: EscritorDados
-      objectReference: {fileID: 0}
-    - target: {fileID: 3314141995236419664, guid: 37a4749e7bcc69d46aaa7c62c62483d1, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5696748629263867906, guid: 37a4749e7bcc69d46aaa7c62c62483d1, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 401
-      objectReference: {fileID: 0}
-    - target: {fileID: 5696748629263867906, guid: 37a4749e7bcc69d46aaa7c62c62483d1, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 497
-      objectReference: {fileID: 0}
-    - target: {fileID: 5696748629263867906, guid: 37a4749e7bcc69d46aaa7c62c62483d1, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5696748629263867906, guid: 37a4749e7bcc69d46aaa7c62c62483d1, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5696748629263867906, guid: 37a4749e7bcc69d46aaa7c62c62483d1, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5696748629263867906, guid: 37a4749e7bcc69d46aaa7c62c62483d1, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5696748629263867906, guid: 37a4749e7bcc69d46aaa7c62c62483d1, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5696748629263867906, guid: 37a4749e7bcc69d46aaa7c62c62483d1, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5696748629263867906, guid: 37a4749e7bcc69d46aaa7c62c62483d1, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5696748629263867906, guid: 37a4749e7bcc69d46aaa7c62c62483d1, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 37a4749e7bcc69d46aaa7c62c62483d1, type: 3}
 --- !u!1 &814220764
 GameObject:
   m_ObjectHideFlags: 0
@@ -3436,17 +3390,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1332663139 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5278661535944959011, guid: 37a4749e7bcc69d46aaa7c62c62483d1, type: 3}
-  m_PrefabInstance: {fileID: 777643191}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1bb9c9c23e3e80d42b4f1ff0f4a4c802, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EscritorDados
 --- !u!1 &1363747622
 GameObject:
   m_ObjectHideFlags: 0
@@ -4530,5 +4473,4 @@ SceneRoots:
   - {fileID: 433117147}
   - {fileID: 190958117}
   - {fileID: 1163533804}
-  - {fileID: 777643191}
   - {fileID: 262852875}
