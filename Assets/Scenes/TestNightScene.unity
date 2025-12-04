@@ -1671,10 +1671,8 @@ MonoBehaviour:
     y: -340
     width: 1114
     height: 859
-  selectedBlocks:
-  - {fileID: 755901048}
-  selectedCommands:
-  - {fileID: 755901049}
+  selectedBlocks: []
+  selectedCommands: []
   variables: []
   description: 
   stepPause: 0
@@ -3487,8 +3485,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Fungus::Fungus.Block
   nodeRect:
     serializedVersion: 2
-    x: 965.2612
-    y: 39.025
+    x: 1039.5472
+    y: 50.45356
     width: 82.15
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -3593,7 +3591,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Fungus::Fungus.Say
   itemId: 128
   indentLevel: 0
-  storyText: "O n\xFAmero come\xE7ava com o ano em que eu nasci"
+  storyText: "Hahaha n\xE3o \xE9 um quadrado, \xE9 uma matriz, mude de perspectiva,
+    tente virar a cabe\xE7a"
   description: 
   character: {fileID: 190958116}
   portrait: {fileID: 21300000, guid: 0843e8ad841d9e544aa8638e351617f0, type: 3}
@@ -3671,7 +3670,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Fungus::Fungus.Say
   itemId: 125
   indentLevel: 0
-  storyText: "O n\xFAmero come\xE7ava com o ano em que eu nasci"
+  storyText: "Voc\xEA deve saber o ano que eu morri e a idade que eu tinha nessa
+    \xE9poca, agora faz as contas"
   description: 
   character: {fileID: 190958116}
   portrait: {fileID: 21300000, guid: 0843e8ad841d9e544aa8638e351617f0, type: 3}
@@ -3749,7 +3749,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Fungus::Fungus.Say
   itemId: 122
   indentLevel: 0
-  storyText: "O n\xFAmero come\xE7ava com o ano em que eu nasci"
+  storyText: "Preste bastante aten\xE7\xE3o no come\xE7o de cada frase, talvez voc\xEA
+    encontre algo..."
   description: 
   character: {fileID: 190958116}
   portrait: {fileID: 21300000, guid: 0843e8ad841d9e544aa8638e351617f0, type: 3}
@@ -3918,8 +3919,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Fungus::Fungus.Block
   nodeRect:
     serializedVersion: 2
-    x: 974.17114
-    y: 127.01144
+    x: 1048.4569
+    y: 191.29716
     width: 81.21
     height: 40
   tint: {r: 0.4156863, g: 0.32941177, b: 0.2509804, a: 1}
@@ -3935,7 +3936,7 @@ MonoBehaviour:
   suppressAllAutoSelections: 0
 --- !u!114 &755901049
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -3960,7 +3961,7 @@ MonoBehaviour:
     booleanVal: 0
 --- !u!114 &755901050
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -3985,7 +3986,7 @@ MonoBehaviour:
     booleanVal: 0
 --- !u!114 &755901051
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
