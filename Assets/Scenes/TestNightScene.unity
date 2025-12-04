@@ -1640,6 +1640,7 @@ GameObject:
   - component: {fileID: 755901049}
   - component: {fileID: 755901051}
   - component: {fileID: 755901050}
+  - component: {fileID: 755901052}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -1660,19 +1661,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: -64.17115, y: 90.1314}
+  scrollPos: {x: -153.13332, y: 119.691444}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
-  blockViewHeight: 400
-  zoom: 0.7000003
+  blockViewHeight: 376
+  zoom: 0.5800004
   scrollViewRect:
     serializedVersion: 2
     x: -343
     y: -340
     width: 1114
     height: 859
-  selectedBlocks: []
-  selectedCommands: []
+  selectedBlocks:
+  - {fileID: 755901032}
+  selectedCommands:
+  - {fileID: 755901047}
   variables: []
   description: 
   stepPause: 0
@@ -1804,7 +1807,7 @@ MonoBehaviour:
   itemId: 2
   indentLevel: 0
   targetFlowchart: {fileID: 0}
-  targetBlock: {fileID: 755901017}
+  targetBlock: {fileID: 755901032}
   startLabel:
     stringRef: {fileID: 0}
     stringVal: 
@@ -2961,7 +2964,7 @@ MonoBehaviour:
   storyText: "O n\xFAmero come\xE7ava com o ano em que eu nasci"
   description: 
   character: {fileID: 190958116}
-  portrait: {fileID: 21300000, guid: 0843e8ad841d9e544aa8638e351617f0, type: 3}
+  portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -3499,6 +3502,7 @@ MonoBehaviour:
   - {fileID: 755901030}
   - {fileID: 755901029}
   - {fileID: 755901028}
+  - {fileID: 755901052}
   - {fileID: 755901027}
   - {fileID: 755901047}
   suppressAllAutoSelections: 0
@@ -3519,7 +3523,7 @@ MonoBehaviour:
   storyText: "Eu lembro de colocar o pr\xF3ximo d\xEDgito em um poema meu"
   description: 
   character: {fileID: 190958116}
-  portrait: {fileID: 21300000, guid: 0843e8ad841d9e544aa8638e351617f0, type: 3}
+  portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -3546,7 +3550,7 @@ MonoBehaviour:
   storyText: E por fim o resto estava em uma arte visual
   description: 
   character: {fileID: 190958116}
-  portrait: {fileID: 21300000, guid: 0843e8ad841d9e544aa8638e351617f0, type: 3}
+  portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -3595,7 +3599,7 @@ MonoBehaviour:
     tente virar a cabe\xE7a"
   description: 
   character: {fileID: 190958116}
-  portrait: {fileID: 21300000, guid: 0843e8ad841d9e544aa8638e351617f0, type: 3}
+  portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -3674,7 +3678,7 @@ MonoBehaviour:
     \xE9poca, agora faz as contas"
   description: 
   character: {fileID: 190958116}
-  portrait: {fileID: 21300000, guid: 0843e8ad841d9e544aa8638e351617f0, type: 3}
+  portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -3753,7 +3757,7 @@ MonoBehaviour:
     encontre algo..."
   description: 
   character: {fileID: 190958116}
-  portrait: {fileID: 21300000, guid: 0843e8ad841d9e544aa8638e351617f0, type: 3}
+  portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -3836,7 +3840,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Fungus::Fungus.Block
   nodeRect:
     serializedVersion: 2
-    x: 844.17065
+    x: 845.8948
     y: 282.7254
     width: 141.70999
     height: 40
@@ -4009,6 +4013,36 @@ MonoBehaviour:
   hideThisOption:
     booleanRef: {fileID: 0}
     booleanVal: 0
+--- !u!114 &755901052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 755900940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ac5ce55bc698fa4290939ef6e426501, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fungus::Fungus.Portrait
+  itemId: 133
+  indentLevel: 0
+  display: 2
+  stage: {fileID: 0}
+  character: {fileID: 190958116}
+  replacedCharacter: {fileID: 0}
+  portrait: {fileID: 0}
+  offset: 0
+  fromPosition: {fileID: 0}
+  toPosition: {fileID: 0}
+  facing: 0
+  useDefaultSettings: 1
+  fadeDuration: 0.5
+  moveDuration: 1
+  shiftOffset: {x: 0, y: 0}
+  move: 0
+  shiftIntoPlace: 0
+  waitUntilFinished: 0
 --- !u!1 &770960006
 GameObject:
   m_ObjectHideFlags: 0
