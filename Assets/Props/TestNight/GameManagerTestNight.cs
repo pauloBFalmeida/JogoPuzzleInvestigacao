@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using Fungus;
 
 public class GameManagerTestNight : MonoBehaviour
 {
@@ -64,5 +65,55 @@ public class GameManagerTestNight : MonoBehaviour
         {
             obj.SetActive(true);
         }
+    }
+
+
+    public void FazerLigacao(string nome)
+    {
+        switch (nome)
+        {
+            case "Joao":
+                AnimLigacao();
+                Invoke("FazerLigacaoJoao", 1.5f);
+                break;
+            case "Puzzle":
+                AnimLigacao();
+                Invoke("FazerLigacaoPuzzle", 1.5f);
+                break;
+            case "Ovis":
+                AnimLigacao();
+                Invoke("FazerLigacaoOvis", 1.5f);
+                break;
+            default:
+                break;
+
+        }
+    }
+
+    
+    private void AnimLigacao()
+    {
+        
+    }
+
+    private void FazerLigacaoPuzzle()
+    {
+        GameManagerTestNight.Instance.MostrarItens();
+
+        Flowchart.BroadcastFungusMessage("ligou_puzzle");
+    }
+
+    private void FazerLigacaoOvis()
+    {
+        GameManagerTestNight.Instance.MostrarItens();
+
+        Flowchart.BroadcastFungusMessage("ligou_ajuda_1");
+    }
+
+    private void FazerLigacaoJoao()
+    {
+        GameManagerTestNight.Instance.MostrarItens();
+
+        Flowchart.BroadcastFungusMessage("ligou_joao");
     }
 }
