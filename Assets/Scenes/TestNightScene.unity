@@ -1604,7 +1604,6 @@ GameObject:
   - component: {fileID: 755901010}
   - component: {fileID: 755901009}
   - component: {fileID: 755901008}
-  - component: {fileID: 755901006}
   - component: {fileID: 755901016}
   - component: {fileID: 755901017}
   - component: {fileID: 755901026}
@@ -1616,6 +1615,14 @@ GameObject:
   - component: {fileID: 755901020}
   - component: {fileID: 755901019}
   - component: {fileID: 755901018}
+  - component: {fileID: 755901032}
+  - component: {fileID: 755901031}
+  - component: {fileID: 755901030}
+  - component: {fileID: 755901029}
+  - component: {fileID: 755901028}
+  - component: {fileID: 755901027}
+  - component: {fileID: 755901034}
+  - component: {fileID: 755901033}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -1636,19 +1643,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 163.68602, y: 25.185528}
+  scrollPos: {x: 92.97166, y: 42.98854}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
-  zoom: 0.7600002
+  zoom: 0.7000003
   scrollViewRect:
     serializedVersion: 2
     x: -343
     y: -340
     width: 1114
     height: 859
-  selectedBlocks:
-  - {fileID: 755900948}
+  selectedBlocks: []
   selectedCommands: []
   variables: []
   description: 
@@ -2891,33 +2897,6 @@ MonoBehaviour:
   itemId: 81
   indentLevel: 0
   key: FimDialogo
---- !u!114 &755901006
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 755900940}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Fungus::Fungus.Say
-  itemId: 94
-  indentLevel: 0
-  storyText: Omagooh 2
-  description: 
-  character: {fileID: 433117146}
-  portrait: {fileID: 21300000, guid: 0843e8ad841d9e544aa8638e351617f0, type: 3}
-  voiceOverClip: {fileID: 0}
-  showAlways: 1
-  showCount: 1
-  extendPrevious: 0
-  fadeWhenDone: 1
-  waitForClick: 1
-  stopVoiceover: 1
-  waitForVO: 0
-  setSayDialog: {fileID: 0}
 --- !u!114 &755901007
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -2934,18 +2913,19 @@ MonoBehaviour:
     serializedVersion: 2
     x: 515.5653
     y: 43.034767
-    width: 91.56
+    width: 151.45999
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
   itemId: 90
-  blockName: Enigma
+  blockName: Descricao Enigma
   description: 
   eventHandler: {fileID: 0}
   commandList:
   - {fileID: 755901009}
   - {fileID: 755901008}
-  - {fileID: 755901006}
+  - {fileID: 755901033}
+  - {fileID: 755901034}
   suppressAllAutoSelections: 0
 --- !u!114 &755901008
 MonoBehaviour:
@@ -2961,7 +2941,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Fungus::Fungus.Say
   itemId: 93
   indentLevel: 0
-  storyText: Omagooh
+  storyText: "O n\xFAmero come\xE7ava com o ano em que eu nasci"
   description: 
   character: {fileID: 190958116}
   portrait: {fileID: 21300000, guid: 0843e8ad841d9e544aa8638e351617f0, type: 3}
@@ -3153,11 +3133,11 @@ MonoBehaviour:
   itemId: 96
   indentLevel: 0
   soundClip: {fileID: 8300000, guid: 5c266c883124cc54fb566b60756bde0d, type: 3}
-  volume: 0.7
+  volume: 0.5
   waitUntilFinished: 0
 --- !u!114 &755901017
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -3175,7 +3155,7 @@ MonoBehaviour:
     height: 40
   tint: {r: 0.30588236, g: 0.16470589, b: 0.12941177, a: 1}
   useCustomTint: 1
-  itemId: 0
+  itemId: 108
   blockName: Intro
   description: 
   eventHandler: {fileID: 0}
@@ -3192,7 +3172,7 @@ MonoBehaviour:
   suppressAllAutoSelections: 0
 --- !u!114 &755901018
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -3213,7 +3193,7 @@ MonoBehaviour:
   callMode: 0
 --- !u!114 &755901019
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -3231,7 +3211,7 @@ MonoBehaviour:
   durationOLD: 0
 --- !u!114 &755901020
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -3248,7 +3228,7 @@ MonoBehaviour:
   delay: 0
 --- !u!114 &755901021
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -3266,7 +3246,7 @@ MonoBehaviour:
   durationOLD: 0
 --- !u!114 &755901022
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -3283,7 +3263,7 @@ MonoBehaviour:
   delay: 0
 --- !u!114 &755901023
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -3301,7 +3281,7 @@ MonoBehaviour:
   durationOLD: 0
 --- !u!114 &755901024
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -3328,7 +3308,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &755901025
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -3345,7 +3325,7 @@ MonoBehaviour:
   waitUntilFinished: 0
 --- !u!114 &755901026
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -3360,6 +3340,204 @@ MonoBehaviour:
   targetObject: {fileID: 1363747622}
   methodName: MudarImagem1
   delay: 0
+--- !u!114 &755901027
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 755900940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 841589fc622bc494aa5405f416fa1301, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fungus::Fungus.Menu
+  itemId: 113
+  indentLevel: 0
+  text: "Preciso da descri\xE7\xE3o do enigma de novo"
+  description: 
+  targetBlock: {fileID: 755901007}
+  hideIfVisited: 0
+  interactable:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  setMenuDialog: {fileID: 0}
+  hideThisOption:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+--- !u!114 &755901028
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 755900940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fungus::Fungus.Say
+  itemId: 112
+  indentLevel: 0
+  storyText: Qual o problema investigador?
+  description: 
+  character: {fileID: 190958116}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &755901029
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 755900940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ac5ce55bc698fa4290939ef6e426501, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fungus::Fungus.Portrait
+  itemId: 111
+  indentLevel: 0
+  display: 1
+  stage: {fileID: 0}
+  character: {fileID: 190958116}
+  replacedCharacter: {fileID: 0}
+  portrait: {fileID: 21300000, guid: 0843e8ad841d9e544aa8638e351617f0, type: 3}
+  offset: 0
+  fromPosition: {fileID: 0}
+  toPosition: {fileID: 1264063144}
+  facing: 0
+  useDefaultSettings: 1
+  fadeDuration: 0.5
+  moveDuration: 1
+  shiftOffset: {x: 0, y: 0}
+  move: 0
+  shiftIntoPlace: 0
+  waitUntilFinished: 0
+--- !u!114 &755901030
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 755900940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fungus::Fungus.CallMethod
+  itemId: 110
+  indentLevel: 0
+  targetObject: {fileID: 10930893}
+  methodName: EsconderTudo
+  delay: 0
+--- !u!114 &755901031
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 755900940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d7d417659cd54a6787f70f763950c34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fungus::Fungus.MessageReceived
+  parentBlock: {fileID: 755901032}
+  suppressBlockAutoSelect: 0
+  message: ligou_ajuda_1
+--- !u!114 &755901032
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 755900940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fungus::Fungus.Block
+  nodeRect:
+    serializedVersion: 2
+    x: 815.26105
+    y: 109.02496
+    width: 82.15
+    height: 40
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  itemId: 109
+  blockName: Ajuda
+  description: 
+  eventHandler: {fileID: 755901031}
+  commandList:
+  - {fileID: 755901030}
+  - {fileID: 755901029}
+  - {fileID: 755901028}
+  - {fileID: 755901027}
+  suppressAllAutoSelections: 0
+--- !u!114 &755901033
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 755900940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fungus::Fungus.Say
+  itemId: 115
+  indentLevel: 0
+  storyText: "Eu lembro de colocar o pr\xF3ximo d\xEDgito em um poema meu"
+  description: 
+  character: {fileID: 190958116}
+  portrait: {fileID: 21300000, guid: 0843e8ad841d9e544aa8638e351617f0, type: 3}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &755901034
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 755900940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fungus::Fungus.Say
+  itemId: 114
+  indentLevel: 0
+  storyText: E por fim o resto estava em uma arte visual
+  description: 
+  character: {fileID: 190958116}
+  portrait: {fileID: 21300000, guid: 0843e8ad841d9e544aa8638e351617f0, type: 3}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
 --- !u!1 &770960006
 GameObject:
   m_ObjectHideFlags: 0
