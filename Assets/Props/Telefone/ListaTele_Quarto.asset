@@ -14,4 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ListaTelefonicaSO
   nomeNumeros:
   - nome: Puzzle
-    telefone: 1010
+    telefone: 2011597
+  - nome: Ovis
+    telefone: 9967
+  - nome: Joao
+    telefone: -608549885
