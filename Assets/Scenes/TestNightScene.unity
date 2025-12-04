@@ -16074,7 +16074,7 @@ GameObject:
   - component: {fileID: 755901063}
   - component: {fileID: 755901062}
   - component: {fileID: 755901061}
-  - component: {fileID: 755901060}
+  - component: {fileID: 755901064}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -16107,9 +16107,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 755900948}
+  - {fileID: 755900955}
   selectedCommands:
-  - {fileID: 755900946}
+  - {fileID: 755901064}
   variables: []
   description: 
   stepPause: 0
@@ -16445,7 +16445,7 @@ MonoBehaviour:
   - {fileID: 755900956}
   - {fileID: 755900988}
   - {fileID: 755900975}
-  - {fileID: 755901060}
+  - {fileID: 755901064}
   suppressAllAutoSelections: 0
 --- !u!114 &755900956
 MonoBehaviour:
@@ -18521,23 +18521,6 @@ MonoBehaviour:
   stopVoiceover: 1
   waitForVO: 0
   setSayDialog: {fileID: 0}
---- !u!114 &755901060
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 755900940}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Fungus::Fungus.CallMethod
-  itemId: 144
-  indentLevel: 0
-  targetObject: {fileID: 10930893}
-  methodName: IrSala
-  delay: 0
 --- !u!114 &755901061
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -18623,6 +18606,25 @@ MonoBehaviour:
   stopVoiceover: 1
   waitForVO: 0
   setSayDialog: {fileID: 0}
+--- !u!114 &755901064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 755900940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00d03ae0919f04264b018681ed534177, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fungus::Fungus.LoadScene
+  itemId: 144
+  indentLevel: 0
+  _sceneName:
+    stringRef: {fileID: 0}
+    stringVal: GameFestSalaScene
+  loadingImage: {fileID: 0}
+  sceneNameOLD: 
 --- !u!1 &770960006
 GameObject:
   m_ObjectHideFlags: 0
