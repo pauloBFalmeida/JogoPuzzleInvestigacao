@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: ListaTele_Sala
   m_EditorClassIdentifier: Assembly-CSharp::ListaTelefonicaSO
   nomeNumeros:
-  - nome: Puzzle
-    telefone: 1000000
+  - nome: ajuda2
+    telefone: 40028922
   - nome: Joao
     telefone: -608549885

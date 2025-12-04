@@ -84,6 +84,10 @@ public class GameManagerTestNight : MonoBehaviour
                 AnimLigacao();
                 Invoke("FazerLigacaoOvis", 1.5f);
                 break;
+            case "ajuda2":
+                AnimLigacao();
+                Invoke("FazerLigacaoMonodo", 1.5f);
+                break;
             default:
                 break;
 
@@ -115,5 +119,13 @@ public class GameManagerTestNight : MonoBehaviour
         GameManagerTestNight.Instance.MostrarItens();
 
         Flowchart.BroadcastFungusMessage("ligou_joao");
+    }
+
+    
+    private void FazerLigacaoMonodo()
+    {
+        GameManagerTestNight.Instance.MostrarItens();
+
+        Flowchart.BroadcastFungusMessage("ligou_ajuda_2");
     }
 }

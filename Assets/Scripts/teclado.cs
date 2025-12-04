@@ -1,4 +1,5 @@
 using UnityEngine;
+using Fungus;
 
 public class teclado : MonoBehaviour
 {
@@ -14,9 +15,11 @@ public class teclado : MonoBehaviour
     public void AddSimbolo(string simbolo)
     {
         entrada += simbolo;
-        if (entrada == resposta)
+        if (entrada == resposta || entrada.Length > 5)
         {
-            Invoke("FazerLigacaoFinal", .5f);
+            GameManagerTestNight.Instance.MostrarItens();
+
+            Flowchart.BroadcastFungusMessage("FazerLigacaoFinal");
         }
     }
 }
