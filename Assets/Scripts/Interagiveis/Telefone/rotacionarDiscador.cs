@@ -1,6 +1,5 @@
 using System;
 using UnityEngine;
-using Fungus;
 
 
 public class RotacionarDiscador : MonoBehaviour
@@ -184,36 +183,8 @@ public class RotacionarDiscador : MonoBehaviour
         {
             string nome = listaTelefonica.GetNomeParaNumero(numeroDiscado);
 
-            switch (nome)
-            {
-                case "Joao":
-                    // chama a func dps desse tempo em segundos
-                    Invoke("FazerLigacaoJoao", 1.5f);
-                    break;
-                case "Puzzle":
-                    // chama a func dps desse tempo em segundos
-                    Invoke("FazerLigacaoPuzzle", 1.5f);
-                    break;
-                default:
-                    break;
-
-            }
-
+            GameManagerTestNight.Instance.FazerLigacao(nome);
         }
-    }
-
-    private void FazerLigacaoPuzzle()
-    {
-        GameManagerTestNight.Instance.MostrarItens();
-
-        Flowchart.BroadcastFungusMessage("ligou_puzzle");
-    }
-
-    private void FazerLigacaoJoao()
-    {
-        GameManagerTestNight.Instance.MostrarItens();
-
-        Flowchart.BroadcastFungusMessage("ligou_joao");
     }
     
     public void SairDiscagem()

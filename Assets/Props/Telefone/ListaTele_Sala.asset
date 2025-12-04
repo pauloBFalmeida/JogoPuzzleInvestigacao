@@ -10,10 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 80e233188b556e24ea024ecdaaa7d01a, type: 3}
-  m_Name: ListaTelefonica
+  m_Name: ListaTele_Sala
   m_EditorClassIdentifier: Assembly-CSharp::ListaTelefonicaSO
   nomeNumeros:
-  - nome: Madu
-    telefone: 420
-  - nome: Gian
-    telefone: 6767
+  - nome: Puzzle
+    telefone: 2011597
+  - nome: Ovis
+    telefone: 9934
+  - nome: Joao
+    telefone: -608549885

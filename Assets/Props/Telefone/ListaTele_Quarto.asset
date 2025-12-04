@@ -10,10 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 80e233188b556e24ea024ecdaaa7d01a, type: 3}
-  m_Name: ListaTelefoneTestNight
+  m_Name: ListaTele_Quarto
   m_EditorClassIdentifier: Assembly-CSharp::ListaTelefonicaSO
   nomeNumeros:
   - nome: Puzzle
-    telefone: 2011286
-  - nome: Joao
-    telefone: -608549885
+    telefone: 1010

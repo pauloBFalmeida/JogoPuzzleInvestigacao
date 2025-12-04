@@ -977,7 +977,7 @@ PrefabInstance:
     - target: {fileID: 260779980901039535, guid: fd9e6f60812da42458e10f9bf9d7f8c6, type: 3}
       propertyPath: listaTelefonica
       value: 
-      objectReference: {fileID: 11400000, guid: bc5c6c471efc71a4db31812d53e6a426, type: 2}
+      objectReference: {fileID: 11400000, guid: 0116a04fabbbc464db354e81e633cb27, type: 2}
     - target: {fileID: 2858677409246494731, guid: fd9e6f60812da42458e10f9bf9d7f8c6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
