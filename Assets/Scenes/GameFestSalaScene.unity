@@ -244,6 +244,100 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 13253339}
   m_CullTransparentMesh: 1
+--- !u!1 &23144288
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 23144289}
+  - component: {fileID: 23144291}
+  - component: {fileID: 23144290}
+  m_Layer: 0
+  m_Name: Tecla1 (6)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &23144289
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 23144288}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.83, y: -3.63, z: -9}
+  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1117324729}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &23144290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 23144288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f0c47271505ff14e94d9319a3320e6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  textoTecla: {fileID: 1857663333}
+  simbolo: 0
+  tecladinho: {fileID: 1117324730}
+--- !u!61 &23144291
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 23144288}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -0.6349853, y: 0.9456666}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 0.26033998, y: 0.8907589}
+  m_EdgeRadius: 0
 --- !u!1 &58644738
 GameObject:
   m_ObjectHideFlags: 0
@@ -447,6 +541,100 @@ Transform:
   - {fileID: 1485229748}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &337735047
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 337735048}
+  - component: {fileID: 337735050}
+  - component: {fileID: 337735049}
+  m_Layer: 0
+  m_Name: Tecla1 (5)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &337735048
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 337735047}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2.71, y: -3.63, z: -9}
+  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1117324729}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &337735049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 337735047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f0c47271505ff14e94d9319a3320e6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  textoTecla: {fileID: 1857663333}
+  simbolo: 0
+  tecladinho: {fileID: 1117324730}
+--- !u!61 &337735050
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 337735047}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -0.6349853, y: 0.9456666}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 0.26033998, y: 0.8907589}
+  m_EdgeRadius: 0
 --- !u!1 &390466203
 GameObject:
   m_ObjectHideFlags: 1
@@ -902,7 +1090,7 @@ Transform:
   m_GameObject: {fileID: 572688624}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.48, y: -3.71, z: -9}
+  m_LocalPosition: {x: -4.48, y: -3.62, z: -9}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -921,7 +1109,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   textoTecla: {fileID: 1857663333}
-  simbolo: \U0001F704
+  simbolo: 92
   tecladinho: {fileID: 1117324730}
 --- !u!61 &572688627
 BoxCollider2D:
@@ -1105,7 +1293,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   textoTecla: {fileID: 1857663333}
-  simbolo: \U0001F70E
+  simbolo: 0
   tecladinho: {fileID: 1117324730}
 --- !u!61 &721986682
 BoxCollider2D:
@@ -6408,7 +6596,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   textoTecla: {fileID: 1857663333}
-  simbolo: \U0001F702
+  simbolo: 0
   tecladinho: {fileID: 1117324730}
 --- !u!61 &921586046
 BoxCollider2D:
@@ -6477,7 +6665,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1117324729
 Transform:
   m_ObjectHideFlags: 0
@@ -6498,6 +6686,8 @@ Transform:
   - {fileID: 1695492837}
   - {fileID: 721986680}
   - {fileID: 1357945821}
+  - {fileID: 337735048}
+  - {fileID: 23144289}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1117324730
@@ -6512,7 +6702,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 310c8ad80f12fe9438c258742b781134, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  resposta: abc
+  resposta: '"abc"'
 --- !u!1 &1163533802
 GameObject:
   m_ObjectHideFlags: 0
@@ -6766,7 +6956,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   textoTecla: {fileID: 1857663333}
-  simbolo: \U0001F717
+  simbolo: 0
   tecladinho: {fileID: 1117324730}
 --- !u!61 &1357945823
 BoxCollider2D:
@@ -7324,7 +7514,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   textoTecla: {fileID: 1857663333}
-  simbolo: \U0001F70A
+  simbolo: 0
   tecladinho: {fileID: 1117324730}
 --- !u!61 &1695492839
 BoxCollider2D:
@@ -7442,6 +7632,7 @@ GameObject:
   - component: {fileID: 1812409170}
   - component: {fileID: 1812409169}
   - component: {fileID: 1812409168}
+  - component: {fileID: 1812409172}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -7505,11 +7696,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 58.603092, y: 130.6879}
+  scrollPos: {x: -139.23714, y: 29.10778}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
-  zoom: 0.6100004
+  zoom: 0.9100001
   scrollViewRect:
     serializedVersion: 2
     x: -343
@@ -7517,8 +7708,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 1812409120}
-  selectedCommands: []
+  - {fileID: 1812409119}
+  selectedCommands:
+  - {fileID: 1812409126}
   variables: []
   description: 
   stepPause: 0
@@ -7647,7 +7839,7 @@ MonoBehaviour:
   itemId: 3
   indentLevel: 0
   targetFlowchart: {fileID: 0}
-  targetBlock: {fileID: 1812409119}
+  targetBlock: {fileID: 1812409124}
   startLabel:
     stringRef: {fileID: 0}
     stringVal: 
@@ -7706,6 +7898,7 @@ MonoBehaviour:
   - {fileID: 1812409144}
   - {fileID: 1812409143}
   - {fileID: 1812409142}
+  - {fileID: 1812409172}
   - {fileID: 1812409133}
   - {fileID: 1812409132}
   - {fileID: 1812409131}
@@ -7915,7 +8108,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Fungus::Fungus.Say
   itemId: 36
   indentLevel: 0
-  storyText: "Se acertar\u2026 o ar voltar\xE1 a se mover."
+  storyText: "Mas se voc\xEA acertar\u2026 o ar voltar\xE1 a se mover."
   description: 
   character: {fileID: 190958116}
   portrait: {fileID: 0}
@@ -7942,7 +8135,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Fungus::Fungus.Say
   itemId: 35
   indentLevel: 0
-  storyText: "Se errar, a sala dormir\xE1 de novo."
+  storyText: "A sala continuar\xE1 dormindo"
   description: 
   character: {fileID: 190958116}
   portrait: {fileID: 0}
@@ -8024,7 +8217,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Fungus::Fungus.Say
   itemId: 32
   indentLevel: 0
-  storyText: "Meu papel n\xE3o \xE9 facilitar\u2026 \xE9 lembrar o que a sala esqueceu."
+  storyText: Melhor se preocupar com o seu papel detetive, lembrar o que a sala esqueceu.
   description: 
   character: {fileID: 190958116}
   portrait: {fileID: 0}
@@ -8051,7 +8244,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Fungus::Fungus.Say
   itemId: 31
   indentLevel: 0
-  storyText: "Isso n\xE3o ajuda muito se voc\xEA falar como um poeta derrotado."
+  storyText: "Voc\xEA soa como um poeta derrotado."
   description: 
   character: {fileID: 433117146}
   portrait: {fileID: 0}
@@ -8321,7 +8514,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Fungus::Fungus.Say
   itemId: 14
   indentLevel: 0
-  storyText: "Cabe a voc\xEA acord\xE1-las na ordem certa."
+  storyText: Ao seguir a ordem, acordar-las-ei.
   description: 
   character: {fileID: 190958116}
   portrait: {fileID: 0}
@@ -8402,7 +8595,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Fungus::Fungus.Say
   itemId: 11
   indentLevel: 0
-  storyText: "Sete notas foram tocadas\u2026 e custaram o respirar desta sala."
+  storyText: "Onde uma vez as sete notas tocaram, agora n\xE3o h\xE1 nada."
   description: 
   character: {fileID: 190958116}
   portrait: {fileID: 0}
@@ -8429,7 +8622,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Fungus::Fungus.Say
   itemId: 10
   indentLevel: 0
-  storyText: "Quero apenas que ou\xE7a. Ou\xE7a de verdade."
+  storyText: Que verdadeiramente me escute.
   description: 
   character: {fileID: 190958116}
   portrait: {fileID: 0}
@@ -8483,7 +8676,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Fungus::Fungus.Say
   itemId: 8
   indentLevel: 0
-  storyText: "E s\xF3 quem entende o sil\xEAncio pode libertar o som adormecido."
+  storyText: "Apenas quem o compreende, libertar\xE1 o som que aqui jaz."
   description: 
   character: {fileID: 190958116}
   portrait: {fileID: 0}
@@ -8510,7 +8703,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Fungus::Fungus.Say
   itemId: 7
   indentLevel: 0
-  storyText: "Voc\xEA voltou ao lugar onde o sil\xEAncio venceu."
+  storyText: "Onde o sil\xEAncio foi vitorioso, retornar\xE1."
   description: 
   character: {fileID: 190958116}
   portrait: {fileID: 0}
@@ -9052,6 +9245,33 @@ MonoBehaviour:
   commandList:
   - {fileID: 1812409170}
   suppressAllAutoSelections: 0
+--- !u!114 &1812409172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1812409109}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fungus::Fungus.Say
+  itemId: 63
+  indentLevel: 0
+  storyText: "Decifre o mist\xE9rio\u2026 e repita o que foi perdido."
+  description: 
+  character: {fileID: 190958116}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
 --- !u!1 &1857663332
 GameObject:
   m_ObjectHideFlags: 0
@@ -9093,7 +9313,7 @@ MonoBehaviour:
   m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 405c7fdd566b99743aa1dddfc5285183, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 3559247687397084167, guid: 405c7fdd566b99743aa1dddfc5285183, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -9161,7 +9381,7 @@ MonoBehaviour:
   _SortingLayer: 0
   _SortingLayerID: 0
   _SortingOrder: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_renderer: {fileID: 1857663334}
   m_maskType: 0
 --- !u!23 &1857663334
@@ -9189,7 +9409,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  - {fileID: 3559247687397084167, guid: 405c7fdd566b99743aa1dddfc5285183, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
