@@ -4,7 +4,7 @@ using UnityEngine;
 public class teclaPiano : MonoBehaviour
 {
     public TMPro.TextMeshPro textoTecla;
-    public String simbolo;
+    public int simboloIndex;
     public teclado tecladinho;
     void Update()
     {
@@ -23,8 +23,8 @@ public class teclaPiano : MonoBehaviour
                 // Verifica se o collider atingido é o deste GameObject
                 if (hit.collider.gameObject == gameObject)
                 {
-                    textoTecla.text = simbolo;
-                    tecladinho.AddSimbolo(simbolo);
+                    textoTecla.text = "" + tecladinho.simbolosTeclas[simboloIndex];
+                    tecladinho.AddSimbolo(simboloIndex);
                 }
             }
         }

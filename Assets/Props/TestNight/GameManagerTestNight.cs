@@ -58,6 +58,10 @@ public class GameManagerTestNight : MonoBehaviour
             {
                 telefoneWrapper.discador.SairDiscagem();
             }
+            if (itemSendoMostrado.TryGetComponent<teclado>(out teclado tecladinho))
+            {
+                tecladinho.SairDiscagem();
+            }
         }
 
         // mostra os itens clicaveis do cenario
