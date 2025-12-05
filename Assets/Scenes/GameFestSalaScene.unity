@@ -7696,7 +7696,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: -139.23714, y: 29.10778}
+  scrollPos: {x: 68.45518, y: 47.789093}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
@@ -7708,9 +7708,8 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 1812409119}
-  selectedCommands:
-  - {fileID: 1812409126}
+  - {fileID: 1812409111}
+  selectedCommands: []
   variables: []
   description: 
   stepPause: 0
@@ -7839,7 +7838,7 @@ MonoBehaviour:
   itemId: 3
   indentLevel: 0
   targetFlowchart: {fileID: 0}
-  targetBlock: {fileID: 1812409124}
+  targetBlock: {fileID: 1812409119}
   startLabel:
     stringRef: {fileID: 0}
     stringVal: 
@@ -7878,12 +7877,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 265
     y: 72
-    width: 91.54
+    width: 124.91
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
   itemId: 1
-  blockName: dialogo
+  blockName: DialogoInicial
   description: 
   eventHandler: {fileID: 0}
   commandList:
