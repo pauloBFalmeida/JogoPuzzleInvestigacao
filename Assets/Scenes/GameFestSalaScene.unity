@@ -7593,8 +7593,6 @@ GameObject:
   - component: {fileID: 1812409139}
   - component: {fileID: 1812409138}
   - component: {fileID: 1812409137}
-  - component: {fileID: 1812409136}
-  - component: {fileID: 1812409135}
   - component: {fileID: 1812409134}
   - component: {fileID: 1812409133}
   - component: {fileID: 1812409132}
@@ -7633,6 +7631,8 @@ GameObject:
   - component: {fileID: 1812409169}
   - component: {fileID: 1812409168}
   - component: {fileID: 1812409172}
+  - component: {fileID: 1812409174}
+  - component: {fileID: 1812409173}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -7696,7 +7696,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 68.45518, y: 47.789093}
+  scrollPos: {x: -143.63275, y: 47.789085}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
@@ -7708,8 +7708,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 1812409111}
-  selectedCommands: []
+  - {fileID: 1812409141}
+  selectedCommands:
+  - {fileID: 1812409173}
   variables: []
   description: 
   stepPause: 0
@@ -8304,60 +8305,6 @@ MonoBehaviour:
   stopVoiceover: 1
   waitForVO: 0
   setSayDialog: {fileID: 0}
---- !u!114 &1812409135
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1812409109}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Fungus::Fungus.Say
-  itemId: 28
-  indentLevel: 0
-  storyText: A quinta repete a primeira.
-  description: 
-  character: {fileID: 190958116}
-  portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
-  showAlways: 1
-  showCount: 1
-  extendPrevious: 0
-  fadeWhenDone: 1
-  waitForClick: 1
-  stopVoiceover: 1
-  waitForVO: 0
-  setSayDialog: {fileID: 0}
---- !u!114 &1812409136
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1812409109}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Fungus::Fungus.Say
-  itemId: 27
-  indentLevel: 0
-  storyText: A quinta repete a primeira.
-  description: 
-  character: {fileID: 190958116}
-  portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
-  showAlways: 1
-  showCount: 1
-  extendPrevious: 0
-  fadeWhenDone: 1
-  waitForClick: 1
-  stopVoiceover: 1
-  waitForVO: 0
-  setSayDialog: {fileID: 0}
 --- !u!114 &1812409137
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -8372,7 +8319,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Fungus::Fungus.Say
   itemId: 26
   indentLevel: 0
-  storyText: "A terceira \xE9 mais grave que todas."
+  storyText: "A terceira \xE9 a mais grave de todas."
   description: 
   character: {fileID: 190958116}
   portrait: {fileID: 0}
@@ -8495,9 +8442,9 @@ MonoBehaviour:
   - {fileID: 1812409139}
   - {fileID: 1812409138}
   - {fileID: 1812409137}
-  - {fileID: 1812409136}
-  - {fileID: 1812409135}
   - {fileID: 1812409134}
+  - {fileID: 1812409173}
+  - {fileID: 1812409174}
   suppressAllAutoSelections: 0
 --- !u!114 &1812409142
 MonoBehaviour:
@@ -9259,6 +9206,60 @@ MonoBehaviour:
   itemId: 63
   indentLevel: 0
   storyText: "Decifre o mist\xE9rio\u2026 e repita o que foi perdido."
+  description: 
+  character: {fileID: 190958116}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &1812409173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1812409109}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fungus::Fungus.Say
+  itemId: 65
+  indentLevel: 0
+  storyText: "A sexta \xE9 unissonante a terceira"
+  description: 
+  character: {fileID: 190958116}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &1812409174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1812409109}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fungus::Fungus.Say
+  itemId: 64
+  indentLevel: 0
+  storyText: "E a s\xE9tima\u2026 \xE9 o sil\xEAncio entre as teclas."
   description: 
   character: {fileID: 190958116}
   portrait: {fileID: 0}
