@@ -11,6 +11,7 @@ public class teclado : MonoBehaviour
 
     public List<AudioClip> audiosTeclas;
     public AudioClip audioSequenciaCorreta;
+    public audioManager soundManager;
     private AudioSource audioSource;
 
     public readonly List<string> simbolosTeclas = new List<string>
@@ -75,7 +76,7 @@ public class teclado : MonoBehaviour
             sequenciaIndiceAtual++;
             if (sequenciaIndiceAtual == sequenciaCorreta.Length)
             {
-                Invoke("SequenciaCompleta", 1.0f);
+                SequenciaCompleta();
             }
         }
         else
@@ -92,9 +93,13 @@ public class teclado : MonoBehaviour
     private void SequenciaCompleta()
     {
         // tocar musica
-        audioSource.clip = audioSequenciaCorreta;
-        audioSource.Play();
-        // chamar o dialogo final
+        soundManager.TrocarMusicaFundo(audioSequenciaCorreta);
+        // chama o dialogo
+        Invoke("dialogoFinalPuzzle", 1.0f);
+    }
+
+    private void dialogoFinalPuzzle()
+    {
         GameManagerTestNight.Instance.MostrarItens();
         Flowchart.BroadcastFungusMessage("FazerLigacaoFinal");
     }

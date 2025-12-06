@@ -17,6 +17,13 @@ public class audioManager : MonoBehaviour
         source = gameObject.AddComponent<AudioSource>();
     }
 
+    public void TrocarMusicaFundo(AudioClip musica)
+    {
+        source.Stop();
+        source.clip = musica;
+        source.Play();
+    }
+
     private void Start()
     {
         StartCoroutine(LoopSomAmbiente());
