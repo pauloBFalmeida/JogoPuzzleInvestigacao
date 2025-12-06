@@ -2250,7 +2250,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &829919329
 Transform:
   m_ObjectHideFlags: 0
@@ -7693,7 +7693,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   textoTecla: {fileID: 1857663333}
-  sequenciaCorreta: 05000000130000000f000000080000000c0000000f0000000c000000
+  sequenciaCorreta: 050000001300000010000000080000000c000000100000000c000000
   audiosTeclas:
   - {fileID: 8300000, guid: 18148b04991162542a131efadb660d58, type: 3}
   - {fileID: 8300000, guid: 02fdfa1e14212494481f7b97bb31733b, type: 3}
@@ -7720,6 +7720,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 944fa184b28be2243896e1ec3ea18ae8, type: 3}
   - {fileID: 8300000, guid: d8d4083c062509744874044a52bd334f, type: 3}
   - {fileID: 8300000, guid: f87d82d891a988a4eb5b5ab59d448784, type: 3}
+  audioSequenciaCorreta: {fileID: 8300000, guid: 5acfa2698748350489d64e6d43d56732, type: 3}
 --- !u!82 &1117324731
 AudioSource:
   m_ObjectHideFlags: 0
@@ -9473,9 +9474,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 1812409111}
+  - {fileID: 1812409141}
   selectedCommands:
-  - {fileID: 1812409117}
+  - {fileID: 1812409174}
   variables: []
   description: 
   stepPause: 0
@@ -10057,7 +10058,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Fungus::Fungus.Say
   itemId: 29
   indentLevel: 0
-  storyText: A quinta repete a primeira.
+  storyText: "A quinta representa o sil\xEAncio."
   description: 
   character: {fileID: 190958116}
   portrait: {fileID: 0}
@@ -10084,7 +10085,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Fungus::Fungus.Say
   itemId: 26
   indentLevel: 0
-  storyText: "A terceira \xE9 a mais grave de todas."
+  storyText: "A terceira \xE9 a abaixo da segunda."
   description: 
   character: {fileID: 190958116}
   portrait: {fileID: 0}
@@ -10111,7 +10112,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Fungus::Fungus.Say
   itemId: 25
   indentLevel: 0
-  storyText: "A segunda ecoa igual \xE0 quarta."
+  storyText: "A segunda \xE9 a mais grave de todas."
   description: 
   character: {fileID: 190958116}
   portrait: {fileID: 0}
@@ -11024,7 +11025,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Fungus::Fungus.Say
   itemId: 64
   indentLevel: 0
-  storyText: "E a s\xE9tima\u2026 \xE9 o sil\xEAncio entre as teclas."
+  storyText: "E a s\xE9tima\u2026 \xE9 o sil\xEAncio final."
   description: 
   character: {fileID: 190958116}
   portrait: {fileID: 0}

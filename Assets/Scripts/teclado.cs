@@ -1,7 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
 using Fungus;
-using Unity.VisualScripting;
 
 public class teclado : MonoBehaviour
 {   
