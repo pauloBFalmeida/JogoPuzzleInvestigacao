@@ -62,6 +62,10 @@ public class GameManagerTestNight : MonoBehaviour
             {
                 tecladinho.Sair();
             }
+            if (itemSendoMostrado.TryGetComponent<BoardMissing>(out BoardMissing placa))
+            {
+                placa.Sair();
+            }
         }
 
         // mostra os itens clicaveis do cenario
