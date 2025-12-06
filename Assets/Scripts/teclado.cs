@@ -9,11 +9,14 @@ public class teclado : MonoBehaviour
     public string resposta = "123";
     private string entrada = "";
 
+    public List<AudioClip> audiosTeclas;
+    private AudioSource audioSource;
+
     public readonly List<string> simbolosTeclas = new List<string>
     {
         "\U0001F702",
-        "\U0001F704",
-        "\U0001F705",
+        "\U0001F73C",
+        "\U0001F73E",
         "\U0001F707",
         "\U0001F709",
         "\U0001F70B",
@@ -32,36 +35,33 @@ public class teclado : MonoBehaviour
         "\U0001F72A",
         "\U0001F72C",
         "\U0001F732",
-        // "\U000",
-        // "\U000",
-        // "\U000",
-        // "\U000",
-        // "\U000",
-        // "\U000",
-        // "\U000",
-        // "\U000",
-        // "\U000",
-        // "\U000",
-        // "\U000",
-        // "\U000",
-        // "\U000",
-        // "\U000",
-        // "\U000",
-        // "\U000",
-        // "\U000",
+        "\U0001F74F",
+        "\U0001F756",
+        "\U0001F762",
+        "\U0001F773",
     };
 
-    // Update is called once per frame
-    public void AddSimbolo(int simboloIndex)
+    
+    private void Awake()
     {
-        textoTecla.text = "" + simbolosTeclas[simboloIndex];
+        audioSource = gameObject.AddComponent<AudioSource>();
+    }
+
+    public void Clicado(int teclaIndex)
+    {
+        // play audio
+        audioSource.clip = audiosTeclas[teclaIndex];
+        audioSource.Play();
+
+        // mostra o simbolo
+        textoTecla.text = "" + simbolosTeclas[teclaIndex];
+        
         // monta a resposta
-        entrada += simboloIndex;
+        entrada += teclaIndex;
         Debug.Log("entrada " + entrada + " resposta " + resposta);
         if (entrada == resposta)
         {
             GameManagerTestNight.Instance.MostrarItens();
-
             Flowchart.BroadcastFungusMessage("FazerLigacaoFinal");
         }
     }
