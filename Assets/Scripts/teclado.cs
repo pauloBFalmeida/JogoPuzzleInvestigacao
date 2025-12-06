@@ -6,10 +6,12 @@ using Unity.VisualScripting;
 public class teclado : MonoBehaviour
 {   
     public TMPro.TextMeshPro textoTecla;
-    public string resposta = "123";
-    private string entrada = "";
+    [SerializeField] public int[] sequenciaCorreta = 
+        { 5, 19, 16, 8, 12, 16, 12 };
+    private int sequenciaIndiceAtual = 0;
 
     public List<AudioClip> audiosTeclas;
+    public AudioClip audioSequenciaCorreta;
     private AudioSource audioSource;
 
     public readonly List<string> simbolosTeclas = new List<string>
@@ -47,7 +49,13 @@ public class teclado : MonoBehaviour
         audioSource = gameObject.AddComponent<AudioSource>();
     }
 
-    public void Clicado(int teclaIndex)
+    public void TeclaEmCima(int teclaIndex)
+    {
+        // mostra o simbolo
+        textoTecla.text = "" + simbolosTeclas[teclaIndex];
+    }
+
+    public void TeclaPressionada(int teclaIndex)
     {
         // play audio
         audioSource.clip = audiosTeclas[teclaIndex];
@@ -57,13 +65,39 @@ public class teclado : MonoBehaviour
         textoTecla.text = "" + simbolosTeclas[teclaIndex];
         
         // monta a resposta
-        entrada += teclaIndex;
-        Debug.Log("entrada " + entrada + " resposta " + resposta);
-        if (entrada == resposta)
+        VerificarSequencia(teclaIndex);
+    }
+
+    private void VerificarSequencia(int nota)
+    {
+        Debug.Log("nota " + nota);
+        if (nota == sequenciaCorreta[sequenciaIndiceAtual])
         {
-            GameManagerTestNight.Instance.MostrarItens();
-            Flowchart.BroadcastFungusMessage("FazerLigacaoFinal");
+            sequenciaIndiceAtual++;
+            if (sequenciaIndiceAtual == sequenciaCorreta.Length)
+            {
+                Invoke("SequenciaCompleta", 1.0f);
+            }
         }
+        else
+        {
+            sequenciaIndiceAtual = 0; // erro: reinicia
+            // se errou apertando a primeira nota da sequencia correta
+            if (nota == sequenciaCorreta[sequenciaIndiceAtual]) { 
+                sequenciaIndiceAtual++;
+            }
+        }
+        Debug.Log("sequenciaIndiceAtual " + sequenciaIndiceAtual);
+    }
+
+    private void SequenciaCompleta()
+    {
+        // tocar musica
+        audioSource.clip = audioSequenciaCorreta;
+        audioSource.Play();
+        // chamar o dialogo final
+        GameManagerTestNight.Instance.MostrarItens();
+        Flowchart.BroadcastFungusMessage("FazerLigacaoFinal");
     }
 
 
@@ -74,7 +108,7 @@ public class teclado : MonoBehaviour
 
     public void Sair()
     {
-        entrada = "";
+        sequenciaIndiceAtual = 0;
     }
 
     private void SetAtivaHitboxGeralSair(bool ativar)

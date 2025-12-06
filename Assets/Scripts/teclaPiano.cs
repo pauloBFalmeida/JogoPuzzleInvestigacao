@@ -8,6 +8,11 @@ public class teclaPiano : MonoBehaviour
 
     void OnMouseDown()
     {
-        tecladinho.Clicado(simboloIndex);
+        tecladinho.TeclaPressionada(simboloIndex);
+    }
+
+    void OnMouseOver()
+    {
+        tecladinho.TeclaEmCima(simboloIndex);
     }
 }

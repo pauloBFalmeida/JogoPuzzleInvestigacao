@@ -475,7 +475,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f0c47271505ff14e94d9319a3320e6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  simboloIndex: 9
+  simboloIndex: 13
   tecladinho: {fileID: 1117324730}
 --- !u!61 &37058527
 BoxCollider2D:
@@ -1386,7 +1386,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f0c47271505ff14e94d9319a3320e6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  simboloIndex: 10
+  simboloIndex: 14
   tecladinho: {fileID: 1117324730}
 --- !u!61 &538944501
 BoxCollider2D:
@@ -7149,7 +7149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f0c47271505ff14e94d9319a3320e6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  simboloIndex: 9
+  simboloIndex: 20
   tecladinho: {fileID: 1117324730}
 --- !u!61 &854717513
 BoxCollider2D:
@@ -7335,7 +7335,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f0c47271505ff14e94d9319a3320e6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  simboloIndex: 10
+  simboloIndex: 24
   tecladinho: {fileID: 1117324730}
 --- !u!61 &994496997
 BoxCollider2D:
@@ -7571,7 +7571,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f0c47271505ff14e94d9319a3320e6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  simboloIndex: 9
+  simboloIndex: 21
   tecladinho: {fileID: 1117324730}
 --- !u!61 &1068891030
 BoxCollider2D:
@@ -7629,13 +7629,14 @@ GameObject:
   m_Component:
   - component: {fileID: 1117324729}
   - component: {fileID: 1117324730}
+  - component: {fileID: 1117324731}
   m_Layer: 0
   m_Name: Item1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1117324729
 Transform:
   m_ObjectHideFlags: 0
@@ -7692,7 +7693,130 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   textoTecla: {fileID: 1857663333}
-  resposta: 12
+  sequenciaCorreta: 05000000130000000f000000080000000c0000000f0000000c000000
+  audiosTeclas:
+  - {fileID: 8300000, guid: 18148b04991162542a131efadb660d58, type: 3}
+  - {fileID: 8300000, guid: 02fdfa1e14212494481f7b97bb31733b, type: 3}
+  - {fileID: 8300000, guid: f35bfeab302daa0448e470e287898959, type: 3}
+  - {fileID: 8300000, guid: 6e53c96ce69afaf4b9c2be3358c29f10, type: 3}
+  - {fileID: 8300000, guid: 644972a5169e685469199dfe105e703f, type: 3}
+  - {fileID: 8300000, guid: 0d7e2cda303ee7c4ca787aeb76737bf6, type: 3}
+  - {fileID: 8300000, guid: e0817f1e00be4bb409536b0b94224a4e, type: 3}
+  - {fileID: 8300000, guid: 604ab680f5a57694d87fe62c343c6a50, type: 3}
+  - {fileID: 8300000, guid: 6eb9da80b3011184f8b3e73965d7e6df, type: 3}
+  - {fileID: 8300000, guid: a1e45498405bd3041a352dffb970294b, type: 3}
+  - {fileID: 8300000, guid: 14add3438c3d93d46b950f9b34d37af0, type: 3}
+  - {fileID: 8300000, guid: 0d86c57f29ab2ee449190a2e2485b878, type: 3}
+  - {fileID: 8300000, guid: 213151b3ef5df7a408d76b42bb67ce80, type: 3}
+  - {fileID: 8300000, guid: 4320d134b6c408541a186a6536effee1, type: 3}
+  - {fileID: 8300000, guid: ae6c2635fd3254d4fbbda92862bb6270, type: 3}
+  - {fileID: 8300000, guid: 2d3fc69730ce7df468570ec1e316d029, type: 3}
+  - {fileID: 8300000, guid: 41f21ef96b1626d4a909d56d837f47f3, type: 3}
+  - {fileID: 8300000, guid: a7d166860f6f2ff41966db1d91268723, type: 3}
+  - {fileID: 8300000, guid: 920ce4814a1b0a745a7a3569eb237608, type: 3}
+  - {fileID: 8300000, guid: 6021c17d68d9f6542b40eb2831d6c76b, type: 3}
+  - {fileID: 8300000, guid: 0b574b11581d7994da65b28041ad0307, type: 3}
+  - {fileID: 8300000, guid: 4f790595e2e9d8341a9ca64b6408af21, type: 3}
+  - {fileID: 8300000, guid: 944fa184b28be2243896e1ec3ea18ae8, type: 3}
+  - {fileID: 8300000, guid: d8d4083c062509744874044a52bd334f, type: 3}
+  - {fileID: 8300000, guid: f87d82d891a988a4eb5b5ab59d448784, type: 3}
+--- !u!82 &1117324731
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1117324728}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1163533802
 GameObject:
   m_ObjectHideFlags: 0
@@ -7791,7 +7915,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f0c47271505ff14e94d9319a3320e6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  simboloIndex: 9
+  simboloIndex: 18
   tecladinho: {fileID: 1117324730}
 --- !u!61 &1232495406
 BoxCollider2D:
@@ -8238,7 +8362,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f0c47271505ff14e94d9319a3320e6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  simboloIndex: 10
+  simboloIndex: 22
   tecladinho: {fileID: 1117324730}
 --- !u!61 &1395449577
 BoxCollider2D:
@@ -8450,7 +8574,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f0c47271505ff14e94d9319a3320e6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  simboloIndex: 10
+  simboloIndex: 17
   tecladinho: {fileID: 1117324730}
 --- !u!61 &1502572792
 BoxCollider2D:
@@ -8543,7 +8667,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f0c47271505ff14e94d9319a3320e6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  simboloIndex: 9
+  simboloIndex: 15
   tecladinho: {fileID: 1117324730}
 --- !u!61 &1510669478
 BoxCollider2D:
@@ -8874,7 +8998,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f0c47271505ff14e94d9319a3320e6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  simboloIndex: 9
+  simboloIndex: 11
   tecladinho: {fileID: 1117324730}
 --- !u!61 &1681862271
 BoxCollider2D:
@@ -8967,7 +9091,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f0c47271505ff14e94d9319a3320e6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  simboloIndex: 9
+  simboloIndex: 16
   tecladinho: {fileID: 1117324730}
 --- !u!61 &1692527689
 BoxCollider2D:
@@ -9153,7 +9277,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f0c47271505ff14e94d9319a3320e6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  simboloIndex: 10
+  simboloIndex: 12
   tecladinho: {fileID: 1117324730}
 --- !u!61 &1776101379
 BoxCollider2D:
@@ -11110,7 +11234,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 0, y: 1.14}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1914669206
@@ -16196,7 +16320,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f0c47271505ff14e94d9319a3320e6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  simboloIndex: 9
+  simboloIndex: 23
   tecladinho: {fileID: 1117324730}
 --- !u!61 &2068229159
 BoxCollider2D:
@@ -16289,7 +16413,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f0c47271505ff14e94d9319a3320e6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  simboloIndex: 10
+  simboloIndex: 19
   tecladinho: {fileID: 1117324730}
 --- !u!61 &2090355123
 BoxCollider2D:
