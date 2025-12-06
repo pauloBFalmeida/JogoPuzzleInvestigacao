@@ -60,7 +60,7 @@ public class GameManagerTestNight : MonoBehaviour
             }
             if (itemSendoMostrado.TryGetComponent<teclado>(out teclado tecladinho))
             {
-                tecladinho.SairDiscagem();
+                tecladinho.Sair();
             }
         }
 
@@ -71,6 +71,7 @@ public class GameManagerTestNight : MonoBehaviour
         }
     }
 
+    public void SetActiveHitboxSairUI(bool active) { hitboxSairUI.SetActive(active); }
 
     public void FazerLigacao(string nome)
     {

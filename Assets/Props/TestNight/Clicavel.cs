@@ -8,5 +8,9 @@ public class Clicavel : MonoBehaviour
     {
         GameManagerTestNight.Instance.EsconderItens(itemMostrar);
         itemMostrar.SetActive(true);
+        
+        if (itemMostrar.TryGetComponent<teclado>(out teclado tecladinho)) {
+            tecladinho.Mostrar();
+        }
     }
 }

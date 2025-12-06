@@ -1,10 +1,12 @@
 using UnityEngine;
 using System.Collections.Generic;
 using Fungus;
+using Unity.VisualScripting;
 
 public class teclado : MonoBehaviour
 {   
-    private string resposta = "123"; // TODO public
+    public TMPro.TextMeshPro textoTecla;
+    public string resposta = "123";
     private string entrada = "";
 
     public readonly List<string> simbolosTeclas = new List<string>
@@ -49,30 +51,34 @@ public class teclado : MonoBehaviour
         // "\U000",
     };
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
     public void AddSimbolo(int simboloIndex)
     {
+        textoTecla.text = "" + simbolosTeclas[simboloIndex];
+        // monta a resposta
         entrada += simboloIndex;
-        Debug.Log("entrada " + entrada);
-        Debug.Log("resposta " + resposta);
-        Debug.Log("== " + (entrada == resposta) );
+        Debug.Log("entrada " + entrada + " resposta " + resposta);
         if (entrada == resposta)
         {
-            Debug.Log("== " + (entrada == resposta) );
             GameManagerTestNight.Instance.MostrarItens();
 
             Flowchart.BroadcastFungusMessage("FazerLigacaoFinal");
         }
     }
 
-    public void SairDiscagem()
+
+    public void Mostrar()
+    {
+        SetAtivaHitboxGeralSair(false);
+    }
+
+    public void Sair()
     {
         entrada = "";
+    }
+
+    private void SetAtivaHitboxGeralSair(bool ativar)
+    {
+        GameManagerTestNight.Instance.SetActiveHitboxSairUI(ativar);
     }
 }
