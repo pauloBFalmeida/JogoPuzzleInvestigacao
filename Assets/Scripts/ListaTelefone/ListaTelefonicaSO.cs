@@ -14,7 +14,14 @@ public class ListaTelefonicaSO : ScriptableObject
     [Header("Nomes e Numeros de Telefone")]
     public List<NomeTelefone> nomeNumeros = new();
 
+    public string numeroAjuda;
+
     private Dictionary<string, string> numeroParaNome;
+
+    public string GetNumeroAjuda()
+    {
+        return numeroAjuda;
+    }
 
     private void InicializarDicionario()
     {

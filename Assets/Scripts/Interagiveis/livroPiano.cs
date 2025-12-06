@@ -14,7 +14,8 @@ public class livroPiano : MonoBehaviour
     {
         string simbFim      = tecladinho.simbolosTeclas[tecladinho.sequenciaCorreta[0]];
         string simbGrave    = tecladinho.simbolosTeclas[tecladinho.sequenciaCorreta[1]];
-        string simbLuz      = tecladinho.simbolosTeclas[tecladinho.sequenciaCorreta[3]];
+        string simbLuz      = tecladinho.simbolosTeclas[tecladinho.sequenciaCorreta[2]];
+        string simbEscuro   = tecladinho.simbolosTeclas[tecladinho.sequenciaCorreta[3]];
         string simbSilencio = tecladinho.simbolosTeclas[tecladinho.sequenciaCorreta[4]];
 
         // ajusta as que nao estao em uso
@@ -25,7 +26,7 @@ public class livroPiano : MonoBehaviour
         textoSimbolos.text += PopRandomSimboloNotInUse() + '\n';
         textoSimbolos.text += simbGrave + '\n';
         textoSimbolos.text += simbLuz + '\n';
-        textoSimbolos.text += PopRandomSimboloNotInUse() + '\n';
+        textoSimbolos.text += simbEscuro + '\n';
         textoSimbolos.text += simbSilencio + '\n';
         textoSimbolos.text += PopRandomSimboloNotInUse() + '\n';
         textoSimbolos.text += simbFim + '\n';

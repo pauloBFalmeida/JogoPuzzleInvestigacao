@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using TMPro;
 
 
 public class RotacionarDiscador : MonoBehaviour
@@ -8,6 +9,7 @@ public class RotacionarDiscador : MonoBehaviour
     [Header("Configurações")]
      private float returnSpeed = 2f;
     public TextoDiscador TextoNumero;
+    public TextMeshPro TextoAjuda;
 
     private bool isDragging = false;
     private float initialAngleOffset;
@@ -16,10 +18,14 @@ public class RotacionarDiscador : MonoBehaviour
     private int ultimoDigitoDiscado = -1;
     private bool chegouLimiteRotacao = false;
     private bool passouPeloDigito9 = false;
+    public ListaTelefonicaSO listaTelefonica;
+    private string numeroDiscado = "";
 
     void Start()
     {
         initialRotation = transform.rotation;
+
+        TextoAjuda.text = "Ajuda:\n" + listaTelefonica.GetNumeroAjuda();
     }
 
     void Update()
@@ -168,8 +174,6 @@ public class RotacionarDiscador : MonoBehaviour
         transform.rotation = Quaternion.Euler(0, 0, currentAngle);
     }
 
-    public ListaTelefonicaSO listaTelefonica;
-    private string numeroDiscado = "";
     private void PegarDigito()
     {
         // ignora digitos que nao sao [0, 9]

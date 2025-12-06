@@ -79,19 +79,23 @@ public class GameManagerTestNight : MonoBehaviour
         {
             case "Joao":
                 AnimLigacao();
-                Invoke("FazerLigacaoJoao", 1.5f);
+                Invoke("FazerLigacaoJoao", 1.0f);
+                break;
+            case "playstation":
+                AnimLigacao();
+                Invoke("FazerLigacaoPlaystation", 1.0f);
                 break;
             case "Puzzle":
                 AnimLigacao();
-                Invoke("FazerLigacaoPuzzle", 1.5f);
+                Invoke("FazerLigacaoPuzzle", 1.0f);
                 break;
             case "Ovis":
                 AnimLigacao();
-                Invoke("FazerLigacaoOvis", 1.5f);
+                Invoke("FazerLigacaoOvis", 1.0f);
                 break;
             case "ajuda2":
                 AnimLigacao();
-                Invoke("FazerLigacaoMonodo", 1.5f);
+                Invoke("FazerLigacaoMonodo", 1.0f);
                 break;
             default:
                 break;
@@ -108,29 +112,29 @@ public class GameManagerTestNight : MonoBehaviour
     private void FazerLigacaoPuzzle()
     {
         GameManagerTestNight.Instance.MostrarItens();
-
         Flowchart.BroadcastFungusMessage("ligou_puzzle");
     }
 
     private void FazerLigacaoOvis()
     {
         GameManagerTestNight.Instance.MostrarItens();
-
         Flowchart.BroadcastFungusMessage("ligou_ajuda_1");
     }
 
     private void FazerLigacaoJoao()
     {
         GameManagerTestNight.Instance.MostrarItens();
-
         Flowchart.BroadcastFungusMessage("ligou_joao");
     }
-
+    private void FazerLigacaoPlaystation()
+    {
+        GameManagerTestNight.Instance.MostrarItens();
+        Flowchart.BroadcastFungusMessage("ligou_ps");
+    }
     
     private void FazerLigacaoMonodo()
     {
         GameManagerTestNight.Instance.MostrarItens();
-
         Flowchart.BroadcastFungusMessage("ligou_ajuda_2");
     }
 }

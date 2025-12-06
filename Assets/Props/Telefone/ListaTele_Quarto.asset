@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: ListaTele_Quarto
   m_EditorClassIdentifier: Assembly-CSharp::ListaTelefonicaSO
   nomeNumeros:
-  - nome: Puzzle
-    telefone: 2011597
   - nome: Ovis
     telefone: 9967
+  - nome: Puzzle
+    telefone: 2011597
   - nome: Joao
     telefone: -608549885
+  numeroAjuda: 9967
