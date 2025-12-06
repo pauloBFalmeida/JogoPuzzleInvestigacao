@@ -1,3 +1,4 @@
+#if UNITY_EDITOR        // so compila no editor
 using UnityEngine;
 using UnityEditor;
 
@@ -24,3 +25,5 @@ public class HashCalculatorTool : EditorWindow
         }
     }
 }
+
+#endif
