@@ -4,10 +4,14 @@ using UnityEngine;
 public class audioManager : MonoBehaviour
 {
     [Header("Áudios possíveis")]
+    [Tooltip("Clipes de audio para tocar nas teclas")]
     [SerializeField] private AudioClip[] clips;   // arraste os clips aqui
 
-    [Header("Intervalo entre sons")]
+    [Space(10)]
+
+    [Header("Intervalo de seg entre sons")]
     [SerializeField] private float tempoMin = 20f;
+    [Range(0,100f)]
     [SerializeField] private float tempoMax = 50f;
 
     private AudioSource source;
